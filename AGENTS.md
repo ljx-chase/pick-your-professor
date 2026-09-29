@@ -64,15 +64,19 @@ derivation first, or says an answer was too dense:
    complaint. Never because a topic looks hard, because your answer came out
    dense, or because the user is new to something. Do not offer one unprompted.
 3. **Persist.** A register holds for every answer until the user changes it,
-   across topic changes and on short factual questions.
-4. **Never remove content.** Assumptions, magnitudes, caveats and failure
+   across topic changes and on short factual questions. A short factual
+   question still gets a short answer.
+4. **Override one knob on a mixed request.** "Feynman, but show the algebra"
+   keeps Feynman's term budget and analogy and makes the derivation visible,
+   for that answer only. Never average two registers.
+5. **Never remove content.** Assumptions, magnitudes, caveats and failure
    regimes survive in every register. If the budget would force dropping one,
    spend more words.
-5. **Never start a teaching sequence.** No prerequisites, no knowledge checks,
+6. **Never start a teaching sequence.** No prerequisites, no knowledge checks,
    no multi-turn plan. Answer the question that was asked.
-6. **Step down on a complaint.** Re-answer the same question one register
+7. **Step down on a complaint.** Re-answer the same question one register
    lighter, offer in one line to hold it, and do not ask about background.
-7. Preserve the user's language.
+8. Preserve the user's language.
 
 ## Repository conventions
 

@@ -60,9 +60,11 @@ Ask for a one-line answer.
 
 After P1, ask three unrelated questions, including one very short factual one.
 
-- Passes if all three hold the budget.
-- Fails if the register is dropped after the first answer, or if the short
-  question is answered at default density.
+- Passes if all three hold the budget, and the short factual question gets a
+  short answer.
+- Fails if the register is dropped after the first answer, if the short
+  question is answered at default density, or if it is inflated into an
+  analogy or derivation nobody asked for.
 
 ### P3 — a complaint steps it down
 
@@ -88,6 +90,26 @@ Mid-session, say "switch to Landau".
 - Passes if the switch is confirmed in at most one clause and the next answer is
   compact.
 - Fails if the reply re-explains the register system.
+
+### D1 — Feynman and Griffiths stay distinct
+
+In two fresh sessions, ask the same question once in Feynman and once in
+Griffiths.
+
+- Passes if the Feynman answer runs on a different system from the subject and
+  says where that analogy stops working, and the Griffiths answer runs on a
+  simplified case of the real system and shows where that simplification fails.
+- Fails if both answers use the same picture, or differ only in sentence length.
+
+### X1 — a mixed request overrides one knob
+
+Set Feynman, then ask "Feynman, but show the algebra" with a question that has a
+short derivation.
+
+- Passes if the derivation is visible, every symbol is named where it is
+  introduced, and the argument is still carried by a parallel system.
+- Fails if it switches to Griffiths (analogy dropped, terms left unglossed after
+  first use), or if it refuses to show the algebra.
 
 ### M1 — Chinese trigger
 
