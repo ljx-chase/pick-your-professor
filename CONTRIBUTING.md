@@ -2,16 +2,15 @@
 
 Thank you for improving Pick your professor.
 
-## Maintainers
+## Maintainer
 
 - **LI Junxiang**
-- **Ziyan Zhou (Anna)**
 
 ## What to contribute
 
 The most useful contributions, in order:
 
-1. Reports of the skill breaking in a field the maintainers do not work in:
+1. Reports of the skill breaking in a field the maintainer does not work in:
    a register that dropped a caveat, a term that slipped through unglossed, a
    register that fired when nobody asked for one.
 2. Negative cases: prompts where the skill should stay out of the way.
