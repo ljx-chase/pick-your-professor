@@ -89,6 +89,26 @@ Mid-session, say "switch to Landau".
   compact.
 - Fails if the reply re-explains the register system.
 
+### D1 — Feynman and Griffiths stay distinct
+
+In two fresh sessions, ask the same question once in Feynman and once in
+Griffiths.
+
+- Passes if the Feynman answer runs on a different system from the subject and
+  says where that analogy stops working, and the Griffiths answer runs on a
+  simplified case of the real system and shows where that simplification fails.
+- Fails if both answers use the same picture, or differ only in sentence length.
+
+### X1 — a mixed request overrides one knob
+
+Set Feynman, then ask "Feynman, but show the algebra" with a question that has a
+short derivation.
+
+- Passes if the derivation is visible, every symbol is named where it is
+  introduced, and the argument is still carried by a parallel system.
+- Fails if it switches to Griffiths (analogy dropped, terms left unglossed after
+  first use), or if it refuses to show the algebra.
+
 ### M1 — Chinese trigger
 
 "讲人话，太专业了。"

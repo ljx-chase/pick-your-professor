@@ -202,10 +202,19 @@ formalism alone.
 
 ## Mixed requests
 
-If the user is in one register and asks for something from another ("Feynman,
-but show me the algebra"), honor the more specific request for that answer, and
-keep the register afterwards. Showing the algebra in Feynman means every symbol
-is still named on introduction; the budget still holds.
+A register sets three defaults: the term budget, what carries the argument,
+and whether the steps are visible. An explicit instruction in the request
+overrides the one field it names, for that answer only. The other two stay
+as the register set them.
+
+"Feynman but show the algebra" means: keep the zero-term budget, keep the
+parallel-system analogy, and make the derivation visible. It does not mean
+switch to Griffiths. Every symbol in that algebra is still named where it is
+introduced, because the budget has not changed.
+
+Never average two registers. If a request names a field you cannot map onto
+one of the three, ask which one it means, in one line, and answer in the
+current register meanwhile.
 
 ---
 

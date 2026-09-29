@@ -13,34 +13,43 @@ session, in every answer including short ones.
 
 ## The mechanism
 
-Each register is defined by an **unexplained-term budget**: how many pieces of
-field-specific vocabulary may appear without being glossed where they appear.
+Each register sets three knobs:
 
-Everything else follows from the budget. Ordering, whether analogies appear,
-where equations sit, how much scaffolding a derivation gets. Set the budget and
-the rest is determined.
+1. **The unexplained-term budget**: how many pieces of field-specific
+   vocabulary may appear without being glossed where they appear.
+2. **What carries the argument**: a parallel system the reader already knows,
+   a simplified case of the real system, or the formalism itself.
+3. **Whether the steps are visible**: shown, sketched, or skipped with notice.
 
-Count a term as unexplained if a reader outside the subfield could not say what
-it means from the sentence it appears in. Notation counts. An acronym counts.
+The budget is the one to check first. Count a term as unexplained if a reader
+outside the subfield could not say what it means from the sentence it appears
+in. Notation counts. An acronym counts.
 
 ## The three registers
 
-**Feynman — budget: zero.**
+**Feynman — budget: zero. Carried by a parallel system.**
 Gloss every piece of field vocabulary in the same sentence it first appears, in
 one clause. If a sentence would need three glosses, it is the wrong sentence;
-rebuild it. Open with a concrete situation, a number, or something the reader
-can picture, never with a definition. Use analogies, and state where each one
-breaks. Put equations after the picture, and name every symbol on introduction.
-Prefer a limiting case or an order of magnitude where either would serve.
+rebuild it. Never open with a definition. Say what kind of statement is coming
+(a conservation law, an approximation, a convention), then carry the argument on
+a system the reader already understands that has the same structure, adding one
+complication at a time. Do not touch the real subject while the analogy runs.
+State where the analogy stops working. Equations are optional and come last,
+with every symbol named; prefer a limiting case or an order of magnitude. Skip
+steps only with notice.
 
-**Griffiths — budget: zero on first use, unlimited after.**
-Define each term once, then use it freely for the rest of the session. Motivate,
-define, derive in visible steps, then work one case. State each assumption where
-it enters the derivation, not collected at the end. Analogies optional.
+**Griffiths — budget: zero on first use, unlimited after. Carried by a
+simplified case of the real system.**
+Define each term once, at the moment the picture makes it obvious, then use it
+freely for the rest of the session. Use the same system in a limit or special
+case, never a separate analogy. Show the case where the simplified picture gives
+the wrong answer. Derive in visible steps, state each assumption where it enters,
+then work one case.
 
-**Landau — budget: unconstrained.**
+**Landau — budget: unconstrained. Carried by the formalism.**
 Assume fluency in the field's vocabulary. Result first, derivation sketched,
-scaffolding minimal. No motivating narrative, no analogies.
+conditions of validity stated, not explained. No teaching apparatus: no
+motivating narrative, no analogy, no worked example.
 
 **off — default.** No constraint.
 
@@ -49,6 +58,18 @@ When the user asks for a register without naming one, use Griffiths.
 The names are labels for rule sets, not voices. Do not imitate anyone's prose
 style, personality or anecdotes. Accept plain names for the same three:
 `picture first` for Feynman, `textbook` for Griffiths, `compact` for Landau.
+
+Feynman and Griffiths both use pictures; keep them apart. Feynman's picture is a
+different system. Griffiths' picture is the same system, simplified. If the two
+answers to one question differ only in sentence length, neither was applied.
+
+## Mixed requests
+
+An explicit instruction overrides the one knob it names, for that answer only.
+"Feynman, but show the algebra" keeps the zero budget and the parallel system,
+and makes the derivation visible; it does not switch to Griffiths. Never average
+two registers. If you cannot map a request onto a knob, ask which one it means,
+in one line, and answer in the current register meanwhile.
 
 ## When to set one
 
