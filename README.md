@@ -65,7 +65,8 @@ This is not an onboarding tool. It changes how an answer is written, not what ge
 ## One question, three registers
 
 The replies below come from test runs of this version: a fresh session with the
-skill installed, one run each, not trimmed or edited.
+skill installed, one run each. The wording is unedited; only the equation markup
+was adapted so that GitHub renders it.
 
 > *Why does the current in a scanning tunneling microscope change about tenfold
 > when the tip moves just one ångström?*
@@ -108,14 +109,14 @@ The "darker dye" stands for a bigger energy shortfall, which makes the wave fade
 - **Small voltage.** It assumes the voltage between tip and surface, usually a few thousandths of a volt up to a volt or two, is small next to the 4 to 5 electron-volt shortfall. At several volts the wall gets tilted and thinned, and the current follows a different rule.
 - **Normal working gap.** It holds at gaps of roughly 4 to 10 ångströms. If the tip is pushed so close that its end atom almost touches the surface atoms, the atoms start pulling on each other and the wall collapses. Then the current stops rising tenfold per ångström and levels off.
 
-**In symbols, if you want them:** current ∝ e^(−2κd).
+**In symbols, if you want them:** current ∝ e<sup>−2κd</sup>.
 - "∝" means "goes in proportion to."
 - e ≈ 2.718, and e raised to a power that grows with d is the formula way of saying "multiply by the same fraction for every bit of d."
 - d is the width of the gap.
 - The 2 is the squaring.
 - κ = √(2mφ)/ħ, where m is the electron's mass, φ is the energy shortfall, and ħ is Planck's constant divided by 2π.
 
-With φ = 4.5 electron-volts, κ ≈ 1.1 per ångström, and e^(2 × 1.1) ≈ 9.
+With φ = 4.5 electron-volts, κ ≈ 1.1 per ångström, and e<sup>2 × 1.1</sup> ≈ 9.
 
 </details>
 
@@ -134,26 +135,26 @@ where m is the electron mass, ħ is Planck's constant divided by 2π, U is the p
 
   κ = √(2mφ) / ħ.
 
-The solutions are e^(−κx) and e^(+κx). Neither oscillates; one decays and one grows. κ is the *decay constant*: every distance 1/κ, ψ shrinks by a factor of e.
+The solutions are e<sup>−κx</sup> and e<sup>+κx</sup>. Neither oscillates; one decays and one grows. κ is the *decay constant*: every distance 1/κ, ψ shrinks by a factor of e.
 
-**Step 2: drop the growing piece.** *Assumption: the barrier is thick, κd ≫ 1.* Matching ψ at the far wall then makes the coefficient of e^(+κx) negligible, so across the gap ψ(x) ≈ ψ(0) e^(−κx).
+**Step 2: drop the growing piece.** *Assumption: the barrier is thick, κd ≫ 1.* Matching ψ at the far wall then makes the coefficient of e<sup>+κx</sup> negligible, so across the gap ψ(x) ≈ ψ(0) e<sup>−κx</sup>.
 
 **Step 3: square it.** The chance that an electron hitting the wall comes out the other side is the *transmission probability* T. It goes as |ψ(d)|² / |ψ(0)|²:
 
-  T ≈ (prefactor) × e^(−2κd).
+  T ≈ (prefactor) × e<sup>−2κd</sup>.
 
 For a rectangular barrier the prefactor is at most 4. It depends on the electron's energies but, in the thick limit, not on d. The factor 2 in the exponent appears because probability is the *square* of ψ.
 
 **Step 4: from T to current.** *Assumption: the bias V, the voltage applied between tip and sample, is small, so eV ≪ φ (e is the electron charge).* Only electrons within eV of the Fermi level have empty levels on the other side to move into. All of them see essentially the same wall. How many arrive per second is set by V and the metals, not by d. So
 
-  I ∝ V e^(−2κd),  which gives  I(d) / I(d + 1 Å) = e^(2κ · 1 Å).
+  I ∝ V e<sup>−2κd</sup>,  which gives  I(d) / I(d + 1 Å) = e<sup>2κ · 1 Å</sup>.
 
 Nothing else in I depends on d, so the whole distance sensitivity sits in that exponent.
 
 **Objection, parked.** You might object that a real tip is a rounded point ending in a few atoms, and that tip and sample are usually different metals. The shape changes the prefactor, and for a sharp tip it leaves the exponent close to 2κd. Different metals make the wall slightly sloped; to this accuracy, use the average of the two work functions for φ. Neither changes the answer to your question.
 
 **Which situations give which behavior.**
-- **Thick barrier, small bias** (κd ≫ 1, eV ≪ φ): the current changes by e^(2κ) per ångström. This is normal STM operation, with gaps of roughly 5–10 Å.
+- **Thick barrier, small bias** (κd ≫ 1, eV ≪ φ): the current changes by e<sup>2κ</sup> per ångström. This is normal STM operation, with gaps of roughly 5–10 Å.
 - **Bias comparable to φ/e (several volts):** the voltage tilts the top of the wall. Electrons near the top of the energy window meet a lower, thinner wall, so κ is no longer one number and the factor per ångström shrinks. Once eV > φ, the wall becomes a triangle and electrons leave by *field emission* (tunneling through a wall whose thickness is set by the electric field rather than directly by d). The distance dependence is then different and weaker.
 - **Gap within a few ångströms of contact:** the exponential picture breaks down (next section).
 
@@ -165,7 +166,7 @@ Even at normal gaps, the barrier height fitted from measured I(d) curves, the *a
 
   κ = √(φ / (ħ²/2m)) = √(4.5 / 3.81) Å⁻¹ = √1.18 Å⁻¹ ≈ 1.09 Å⁻¹.
 
-Over 1 Å, ψ falls by e^(1.09) ≈ 3.0 and the current falls by e^(2.17) ≈ 8.8. With φ = 5 eV, κ ≈ 1.15 Å⁻¹ and the factor is e^(2.29) ≈ 9.9.
+Over 1 Å, ψ falls by e<sup>1.09</sup> ≈ 3.0 and the current falls by e<sup>2.17</sup> ≈ 8.8. With φ = 5 eV, κ ≈ 1.15 Å⁻¹ and the factor is e<sup>2.29</sup> ≈ 9.9.
 
 Checking Step 2's assumption: at a 6 Å gap, κd ≈ 6.5, which is well above 1.
 
@@ -178,11 +179,13 @@ So the tenfold figure is the square of a roughly threefold drop in ψ per ångst
 
 The tunnelling current falls off exponentially with the gap:
 
-$$I \propto V\,e^{-2\kappa d},\qquad \kappa=\frac{\sqrt{2m\phi}}{\hbar}\;\Rightarrow\; -\frac{d\ln I}{dd}=2\kappa\approx 1.025\sqrt{\phi\,[\mathrm{eV}]}\ \text{Å}^{-1}.$$
+```math
+I \propto V\,e^{-2\kappa d},\qquad \kappa=\frac{\sqrt{2m\phi}}{\hbar}\;\Rightarrow\; -\frac{d\ln I}{dd}=2\kappa\approx 1.025\sqrt{\phi\,[\mathrm{eV}]}\ \text{Å}^{-1}.
+```
 
-Here φ is the effective barrier, roughly (φ_tip + φ_sample)/2. For metals, φ ≈ 4–5 eV, so 2κ ≈ 2.0–2.3 Å⁻¹. That gives a factor of e^{2κ·1 Å} ≈ 8–10 per ångström. An exact factor of 10 corresponds to φ ≈ 5 eV.
+Here φ is the effective barrier, roughly (φ<sub>tip</sub> + φ<sub>sample</sub>)/2. For metals, φ ≈ 4–5 eV, so 2κ ≈ 2.0–2.3 Å⁻¹. That gives a factor of e<sup>2κ·1 Å</sup> ≈ 8–10 per ångström. An exact factor of 10 corresponds to φ ≈ 5 eV.
 
-**Sketch.** Use Bardeen's transfer Hamiltonian with an s-wave tip (Tersoff–Hamann), at low bias: I ∝ V ρ_t(E_F) ρ_s(r₀, E_F). The sample states at E_F decay into vacuum as ψ ∝ e^{−κz}, so ρ_s(r₀) ∝ e^{−2κ(d+R)}. A 1D WKB treatment of a rectangular barrier gives the same exponent. Any d-dependence in the prefactor is algebraic and negligible next to the exponential. Components with k_∥ ≠ 0 decay with √(κ² + k_∥²), so the current comes mainly from k_∥ ≈ 0, and κ is the smallest decay constant available.
+**Sketch.** Use Bardeen's transfer Hamiltonian with an s-wave tip (Tersoff–Hamann), at low bias: I ∝ V ρ<sub>t</sub>(E<sub>F</sub>) ρ<sub>s</sub>(r₀, E<sub>F</sub>). The sample states at E<sub>F</sub> decay into vacuum as ψ ∝ e<sup>−κz</sup>, so ρ<sub>s</sub>(r₀) ∝ e<sup>−2κ(d+R)</sup>. A 1D WKB treatment of a rectangular barrier gives the same exponent. Any d-dependence in the prefactor is algebraic and negligible next to the exponential. Components with k<sub>∥</sub> ≠ 0 decay with √(κ² + k<sub>∥</sub>²), so the current comes mainly from k<sub>∥</sub> ≈ 0, and κ is the smallest decay constant available.
 
 **Validity.**
 - **Low bias, eV ≪ φ.** At finite bias the barrier is trapezoidal and φ → φ − eV/2. For eV > φ you are in the Fowler–Nordheim regime, where the dependence on d is weaker.
@@ -205,17 +208,17 @@ This is an approximate scaling law, and it has two parts. The first is a countin
 
 Take a sheet of tinted glass that lets through a third of the light that hits it. With two sheets in a row, a third of a third gets through, which is 1/9. With three sheets it is 1/27. Call the brightness going in B₀, the fraction one sheet lets through f, and the number of sheets N. The brightness coming out is
 
-  B = B₀ · f^N
+  B = B₀ · f<sup>N</sup>
 
 Adding one more sheet always multiplies the output by f, whether you already had 2 sheets or 200. The ratio from one step to the next doesn't depend on where you are.
 
 *First complication: the stack becomes one solid block.* Think of the block as many thin slices of thickness s, each letting through the fraction f. A block of thickness x holds x/s slices, so
 
-  B(x) = B₀ · f^(x/s)
+  B(x) = B₀ · f<sup>x/s</sup>
 
-Make the block thicker by an amount Δ and the output drops by the factor f^(Δ/s). Again, that factor is the same however thick the block already was. A quantity that falls by the same factor for every equal step is said to fall *exponentially*. It is usually written with the number e ≈ 2.718, as B(x) = B₀ · e^(−x/L). Here L is the extra thickness that cuts the brightness by a factor of 2.718.
+Make the block thicker by an amount Δ and the output drops by the factor f<sup>Δ/s</sup>. Again, that factor is the same however thick the block already was. A quantity that falls by the same factor for every equal step is said to fall *exponentially*. It is usually written with the number e ≈ 2.718, as B(x) = B₀ · e<sup>−x/L</sup>. Here L is the extra thickness that cuts the brightness by a factor of 2.718.
 
-*Second complication: a square.* What the glass shrinks is the height of the light wave, meaning how strongly it swings. What a light meter reads, the brightness, is that height squared. Suppose the height falls as e^(−κx), where κ (Greek "kappa") is the fade rate of the height per unit thickness. Then the brightness falls as (e^(−κx))² = e^(−2κx), so it falls twice as steeply.
+*Second complication: a square.* What the glass shrinks is the height of the light wave, meaning how strongly it swings. What a light meter reads, the brightness, is that height squared. Suppose the height falls as e<sup>−κx</sup>, where κ (Greek "kappa") is the fade rate of the height per unit thickness. Then the brightness falls as (e<sup>−κx</sup>)² = e<sup>−2κx</sup>, so it falls twice as steeply.
 
 *Third complication: darkness.* Darker glass has a bigger κ, so the same extra thickness costs a bigger factor. How dark the glass is sets the size of the whole effect.
 
@@ -240,21 +243,21 @@ The electrons that cross are the most energetic ones in the metal, and even they
 
 2. Inside the metal, E is bigger than U, so the right side has the opposite sign to ψ. Wherever the wave is above zero it bends back down, and wherever it is below zero it bends back up. The result is a wiggle, which is an ordinary moving electron.
 
-3. In the gap, U − E = φ, which is positive. Now the wave bends *away* from zero wherever it is, so it grows or shrinks without wiggling. The shrinking piece is ψ(x) = ψ(0) · e^(−κx). Its bending is κ² · e^(−κx). Substituting into the rule gives
+3. In the gap, U − E = φ, which is positive. Now the wave bends *away* from zero wherever it is, so it grows or shrinks without wiggling. The shrinking piece is ψ(x) = ψ(0) · e<sup>−κx</sup>. Its bending is κ² · e<sup>−κx</sup>. Substituting into the rule gives
 
    κ² = 2mφ/ħ²  →  κ = √(2mφ) / ħ
 
    (A gap of finite width also allows a growing piece. When κd is well above 1, as it is here at about 5 to 10, including it changes only the constant in front and not the fade. I'm skipping that bookkeeping.)
 
-4. Quantum mechanics has a rule that the chance of finding the electron at a spot is the square of the wave's height there. At the far side of the gap the height is down by e^(−κd), so the chance of arriving is down by e^(−2κd). This is the square from the glass. The current follows it:
+4. Quantum mechanics has a rule that the chance of finding the electron at a spot is the square of the wave's height there. At the far side of the gap the height is down by e<sup>−κd</sup>, so the chance of arriving is down by e<sup>−2κd</sup>. This is the square from the glass. The current follows it:
 
-   I ≈ C · V · e^(−2κd)
+   I ≈ C · V · e<sup>−2κd</sup>
 
    Here I is the current and V is the small voltage between tip and sample that makes electrons flow one way. C lumps together how many electrons are ready on one side and how many empty places are waiting on the other.
 
 5. Pull the tip back by 1 Å:
 
-   I(d) / I(d + 1 Å) = e^(2κ · 1 Å)
+   I(d) / I(d + 1 Å) = e<sup>2κ · 1 Å</sup>
 
    d has cancelled, so the factor is the same at every gap width. This is the extra-sheet rule.
 
@@ -262,7 +265,7 @@ The electrons that cross are the most energetic ones in the metal, and even they
    - 2mφ = 2 × (9.11×10⁻³¹ kg) × (8.0×10⁻¹⁹ J) = 1.46×10⁻⁴⁸ kg·J
    - √(2mφ) = 1.21×10⁻²⁴ kg·m/s
    - κ = 1.21×10⁻²⁴ / 1.055×10⁻³⁴ = 1.15×10¹⁰ per metre = 1.15 per ångström
-   - 2κ × 1 Å = 2.29, and e^2.29 ≈ 9.9
+   - 2κ × 1 Å = 2.29, and e<sup>2.29</sup> ≈ 9.9
 
    That is the tenfold. A handy form is κ ≈ 0.51 × √(φ in eV) per ångström, which gives:
 
