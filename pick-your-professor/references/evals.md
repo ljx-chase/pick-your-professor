@@ -60,9 +60,11 @@ Ask for a one-line answer.
 
 After P1, ask three unrelated questions, including one very short factual one.
 
-- Passes if all three hold the budget.
-- Fails if the register is dropped after the first answer, or if the short
-  question is answered at default density.
+- Passes if all three hold the budget, and the short factual question gets a
+  short answer.
+- Fails if the register is dropped after the first answer, if the short
+  question is answered at default density, or if it is inflated into an
+  analogy or derivation nobody asked for.
 
 ### P3 — a complaint steps it down
 

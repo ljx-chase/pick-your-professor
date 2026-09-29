@@ -102,6 +102,10 @@ cut the answer to one claim, and work a concrete number.
 A register applies to every answer until the user changes it. It does not expire
 when the topic changes, and it does not lapse on short factual questions.
 
+A short factual question still gets a short answer. Hold the budget and gloss in
+place, but do not build an analogy, a derivation or a worked case that the
+question did not ask for.
+
 The user may switch at any time, including mid-answer. Confirm in at most one
 short clause and continue. Do not re-explain what the register does each time it
 changes.

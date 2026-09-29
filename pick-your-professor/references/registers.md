@@ -221,7 +221,10 @@ current register meanwhile.
 ## Persistence
 
 A register applies to every answer for the rest of the session, including
-short factual ones. It does not expire when the topic changes. The user can
+short factual ones. It does not expire when the topic changes. A short factual
+question still gets a short answer: hold the budget and gloss in place, but do
+not build an analogy, a derivation or a worked case the question did not ask
+for. The user can
 change it at any time; confirm in at most one short sentence and continue. Do
 not re-explain what the register does each time it changes.
 
