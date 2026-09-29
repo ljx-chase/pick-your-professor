@@ -141,7 +141,7 @@ in Feynman, a register set when nobody asked.
 @misc{pick_your_professor_2026,
   title        = {Pick your professor: a cross-agent skill for setting the
                   density of research answers},
-  author       = {Li, Junxiang and Zhou, Ziyan},
+  author       = {Li, Junxiang},
   year         = {2026},
   howpublished = {\url{https://github.com/ljx-chase/pick-your-professor}},
   note         = {GitHub repository}
@@ -150,4 +150,4 @@ in Feynman, a register set when nobody asked.
 
 ## License
 
-MIT License. Copyright (c) 2026 LI Junxiang and Ziyan Zhou (Anna).
+MIT License. Copyright (c) 2026 LI Junxiang.
