@@ -1,6 +1,6 @@
 <div align="center">
 
-# Pick your professor
+<img src="docs/logo.png" alt="Pick Your Professor: set how densely it explains. It holds for the whole session." width="720"/>
 
 <p>
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License"/></a>
@@ -73,6 +73,10 @@ vocabulary may appear without a gloss where they appear. "Write more simply" is 
 wish; a term budget is a rule that can be followed and checked.
 
 ## The three registers
+
+<p align="center">
+<img src="docs/registers.png" alt="Three registers: Feynman (picture first), Griffiths (textbook, default) and Landau (compact)" width="820"/>
+</p>
 
 - **Feynman** — zero unexplained terms. Picture first, analogies with their
   limits stated, equations after.

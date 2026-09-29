@@ -1,6 +1,6 @@
 <div align="center">
 
-# Pick your professor
+<img src="docs/logo-zh.png" alt="挑个老师：选定讲解的密度，整段对话都照这个来。" width="720"/>
 
 <p>
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License"/></a>
@@ -49,6 +49,10 @@ section of the repo's AGENTS.md.
 真正起控制作用的是**未解释术语预算**：允许多少个领域术语在出现的地方不加解释。“写简单点”只是愿望；术语预算是可以执行、也可以检查的规则。
 
 ## 三种写法
+
+<p align="center">
+<img src="docs/registers-zh.png" alt="三档讲解密度：费曼（先讲图像）、格里菲斯（教科书，默认）、朗道（紧凑）" width="820"/>
+</p>
 
 - **Feynman**：零个未解释术语。先给图像，类比要说明在哪里失效，公式放在后面。
 - **Griffiths**：每个术语首次出现时定义，之后自由使用。教科书顺序：动机、定义、推导、算一个例子。
