@@ -121,15 +121,11 @@ section of the repo's AGENTS.md.
 
 描述电子的是 **波函数** $`\psi(x)`$，$`|\psi|^2`$ 给出在位置 $`x`$ 找到电子的概率密度。能量为 $`E`$ 的电子在势能 $`U`$ 中满足 **定态薛定谔方程**（量子力学里给定能量的粒子所服从的方程）：
 
-```math
--\frac{\hbar^2}{2m}\psi'' + U\psi = E\psi
-```
+$`\displaystyle -\frac{\hbar^2}{2m}\psi'' + U\psi = E\psi`$
 
 其中 $`m`$ 是电子质量，$`\hbar`$ 是约化普朗克常数。在势垒内部 $`U - E = \phi > 0`$，方程变成
 
-```math
-\psi'' = \kappa^2\psi,\qquad \kappa = \frac{\sqrt{2m\phi}}{\hbar}
-```
+$`\displaystyle \psi'' = \kappa^2\psi,\qquad \kappa = \frac{\sqrt{2m\phi}}{\hbar}`$
 
 解是 $`e^{-\kappa x}`$ 和 $`e^{+\kappa x}`$。它们不再振荡，只是按指数变化。$`\kappa`$ 叫 **衰减常数**：波函数每深入势垒 $`1/\kappa`$ 的距离，振幅缩小到原来的 $`1/e`$。
 
@@ -143,23 +139,17 @@ section of the repo's AGENTS.md.
 
 **透射概率** $`T`$ 是入射电子最后出现在势垒另一侧的比例。它按 $`|\psi|^2`$ 计算，所以振幅因子 $`e^{-\kappa d}`$ 平方后变成
 
-```math
-T \approx T_0\,e^{-2\kappa d}
-```
+$`\displaystyle T \approx T_0\,e^{-2\kappa d}`$
 
 前因子 $`T_0`$ 的量级为 1，只依赖能量，不依赖 $`d`$。对矩形势垒，$`T_0 = 16E\phi/(E+\phi)^2`$，其中 $`E`$ 从金属内部的势能底部量起。
 
 隧穿电流等于每秒穿过势垒的电子数乘以电子电荷。偏压小的时候，能贡献净电流的只是能量落在 **费米能级**（金属中已被占据的最高电子能级）下方宽度约 $`eV`$ 的那一小段里的电子，这批电子的数目与 $`d`$ 无关（*假设 3*）。于是
 
-```math
-I \propto V\,e^{-2\kappa d}
-```
+$`\displaystyle I \propto V\,e^{-2\kappa d}`$
 
 $`d`$ 只出现在指数里，所以针尖后退 $`\Delta d`$ 时，电流之比为
 
-```math
-\frac{I(d+\Delta d)}{I(d)} = e^{-2\kappa\,\Delta d}
-```
+$`\displaystyle \frac{I(d+\Delta d)}{I(d)} = e^{-2\kappa\,\Delta d}`$
 
 这个比值与 $`d`$ 本身无关。所以在整个工作范围内，"每移动一埃电流变化一个固定倍数"都成立。
 
@@ -169,9 +159,7 @@ $`d`$ 只出现在指数里，所以针尖后退 $`\Delta d`$ 时，电流之比
 
 取 $`\phi = 4.5`$ eV $`= 7.21\times10^{-19}`$ J：
 
-```math
-\kappa = \frac{\sqrt{2\times 9.11\times10^{-31}\,\text{kg}\times 7.21\times10^{-19}\,\text{J}}}{1.055\times10^{-34}\,\text{J·s}} \approx 1.09\times10^{10}\ \text{m}^{-1} = 1.09\ \text{Å}^{-1}
-```
+$`\displaystyle \kappa = \frac{\sqrt{2\times 9.11\times10^{-31}\,\text{kg}\times 7.21\times10^{-19}\,\text{J}}}{1.055\times10^{-34}\,\text{J·s}} \approx 1.09\times10^{10}\ \text{m}^{-1} = 1.09\ \text{Å}^{-1}`$
 
 （好记的写法：$`\kappa \approx 0.51\sqrt{\phi/\text{eV}}\ \text{Å}^{-1}`$。）
 
