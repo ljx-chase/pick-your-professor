@@ -531,3 +531,10 @@ in Feynman, a register set when nobody asked.
 ## License
 
 MIT License. Copyright (c) 2026 LI Junxiang.
+
+## Disclaimer
+
+Feynman, Griffiths and Landau are used here as descriptive labels for
+explanation styles, not as references to any product, publication, or
+person's work. This project is not affiliated with, endorsed by, or
+connected to any of them, their estates, or their publishers.
