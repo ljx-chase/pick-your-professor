@@ -424,3 +424,12 @@ $`\displaystyle \kappa = \frac{\sqrt{2 \times 9.11\times10^{-31} \times 7.21\tim
 ## 许可
 
 MIT License. Copyright (c) 2026 LI Junxiang.
+
+## 声明
+
+Feynman, Griffiths and Landau are used here as descriptive labels for
+explanation styles, not as references to any product, publication, or
+person's work. This project is not affiliated with, endorsed by, or
+connected to any of them, their estates, or their publishers.
+
+本项目中的 Feynman、Griffiths 和 Landau 仅作为讲解风格的描述性标签使用，并不指代任何产品、出版物或个人作品。本项目与上述人物、其遗产管理方或出版方均无任何关联，也未获得其认可或背书。
