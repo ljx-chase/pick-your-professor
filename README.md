@@ -4,7 +4,7 @@
 
 <p>
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License"/></a>
-<img src="https://img.shields.io/badge/version-v1.1.0-blue?style=flat-square" alt="Version"/>
+<img src="https://img.shields.io/badge/version-v1.2.0-blue?style=flat-square" alt="Version"/>
 <a href="https://github.com/ljx-chase/pick-your-professor/stargazers"><img src="https://img.shields.io/github/stars/ljx-chase/pick-your-professor?style=flat-square&color=yellow" alt="Stars"/></a>
 </p>
 
@@ -241,18 +241,18 @@ The other assumptions fail in their own regimes:
 <details>
 <summary><b>Landau</b></summary>
 
-$I \propto e^{-2\kappa d}$, with $\kappa = \sqrt{2m\phi}/\hbar$. In practical units $\kappa\,[\text{Å}^{-1}] = 0.512\sqrt{\phi\,[\text{eV}]}$. For $\phi \approx 4\text{–}5$ eV (typical metal work functions), $\kappa \approx 1.0\text{–}1.15\ \text{Å}^{-1}$, so $e^{2\kappa \cdot 1\,\text{Å}} \approx 8\text{–}10$. A factor of exactly 10 per Å corresponds to $2\kappa = \ln 10 = 2.30\ \text{Å}^{-1}$, i.e. $\phi \approx 5.0$ eV.
+$`I \propto e^{-2\kappa d}`$, with $`\kappa = \sqrt{2m\phi}/\hbar`$. In practical units $`\kappa\,[\text{Å}^{-1}] = 0.512\sqrt{\phi\,[\text{eV}]}`$. For $`\phi \approx 4\text{–}5`$ eV (typical metal work functions), $`\kappa \approx 1.0\text{–}1.15\ \text{Å}^{-1}`$, so $`e^{2\kappa \cdot 1\,\text{Å}} \approx 8\text{–}10`$. A factor of exactly 10 per Å corresponds to $`2\kappa = \ln 10 = 2.30\ \text{Å}^{-1}`$, i.e. $`\phi \approx 5.0`$ eV.
 
-**Sketch.** Treat the gap as a 1D rectangular barrier of height $\phi \approx (\phi_t + \phi_s)/2$ measured from $E_F$. At low bias, Bardeen's transfer-Hamiltonian result in the Tersoff–Hamann limit (s-wave tip) gives $I \propto V\,\rho_t(E_F)\,\rho_s(\mathbf r_0, E_F)$. Here $\rho_s(\mathbf r_0)$ is the sample LDOS at the tip centre. Outside the surface, $\psi_s \sim e^{-\kappa z}$, so $\rho_s(\mathbf r_0) \propto e^{-2\kappa(d+R)}$. The $d$-dependence of the prefactors is algebraic and negligible next to the exponential. WKB gives the same exponent: $T \approx e^{-2\int \kappa(z)\,dz}$.
+**Sketch.** Treat the gap as a 1D rectangular barrier of height $`\phi \approx (\phi_t + \phi_s)/2`$ measured from $`E_F`$. At low bias, Bardeen's transfer-Hamiltonian result in the Tersoff–Hamann limit (s-wave tip) gives $`I \propto V\,\rho_t(E_F)\,\rho_s(\mathbf r_0, E_F)`$. Here $`\rho_s(\mathbf r_0)`$ is the sample LDOS at the tip centre. Outside the surface, $`\psi_s \sim e^{-\kappa z}`$, so $`\rho_s(\mathbf r_0) \propto e^{-2\kappa(d+R)}`$. The $`d`$-dependence of the prefactors is algebraic and negligible next to the exponential. WKB gives the same exponent: $`T \approx e^{-2\int \kappa(z)\,dz}`$.
 
-Inverting gives the apparent barrier height: $\phi_A = \frac{\hbar^2}{8m}\left(\frac{d\ln I}{ds}\right)^2 = 0.952\ \text{eV·Å}^2 \times \left(\frac{d\ln I}{ds}\right)^2$.
+Inverting gives the apparent barrier height: $`\phi_A = \frac{\hbar^2}{8m}\left(\frac{d\ln I}{ds}\right)^2 = 0.952\ \text{eV·Å}^2 \times \left(\frac{d\ln I}{ds}\right)^2`$.
 
 **Validity and corrections.**
-- $eV \ll \phi$. At finite bias the effective barrier is $\approx \phi - e|V|/2$, which lowers $\kappa$. For $eV \gtrsim \phi$ you are in the Fowler–Nordheim regime.
-- States with $k_\parallel \neq 0$ decay faster: $\kappa^2 = 2m\phi/\hbar^2 + k_\parallel^2$. Tunnelling therefore samples near-$\bar\Gamma$ states, and the corrugation of high-$k_\parallel$ Fourier components decays much faster than $I$ does.
-- The image potential rounds and lowers the barrier. Measured $\phi_A$ is typically 1–4 eV rather than the full work function, so the decade-per-Å figure is an upper-end estimate. Under ambient or contaminated conditions, $\phi_A$ can be well below 1 eV.
-- At $d \lesssim 3\text{–}5$ Å the barrier collapses toward point contact, $G \to G_0 = 2e^2/h$, and the exponential law fails. Tip–sample forces also deform the junction, so the true gap differs from the piezo displacement $s$.
-- The exponent assumes elastic, single-barrier tunnelling. Inelastic channels and resonant (adsorbate-mediated) channels modify the prefactor. They do not change the leading $e^{-2\kappa d}$ scaling unless they introduce states inside the barrier.
+- $`eV \ll \phi`$. At finite bias the effective barrier is $`\approx \phi - e|V|/2`$, which lowers $`\kappa`$. For $`eV \gtrsim \phi`$ you are in the Fowler–Nordheim regime.
+- States with $`k_\parallel \neq 0`$ decay faster: $`\kappa^2 = 2m\phi/\hbar^2 + k_\parallel^2`$. Tunnelling therefore samples near-$`\bar\Gamma`$ states, and the corrugation of high-$`k_\parallel`$ Fourier components decays much faster than $`I`$ does.
+- The image potential rounds and lowers the barrier. Measured $`\phi_A`$ is typically 1–4 eV rather than the full work function, so the decade-per-Å figure is an upper-end estimate. Under ambient or contaminated conditions, $`\phi_A`$ can be well below 1 eV.
+- At $`d \lesssim 3\text{–}5`$ Å the barrier collapses toward point contact, $`G \to G_0 = 2e^2/h`$, and the exponential law fails. Tip–sample forces also deform the junction, so the true gap differs from the piezo displacement $`s`$.
+- The exponent assumes elastic, single-barrier tunnelling. Inelastic channels and resonant (adsorbate-mediated) channels modify the prefactor. They do not change the leading $`e^{-2\kappa d}`$ scaling unless they introduce states inside the barrier.
 
 This steepness is also why lateral resolution comes from roughly the single front-most tip atom: an atom recessed by 1 Å contributes about 10% as much current.
 
@@ -295,11 +295,7 @@ In quantum mechanics an electron is described by a *wavefunction* ψ(x): a numbe
 
 The rule that governs ψ is the *Schrödinger equation*. For one direction and a region where the potential energy is a constant U, it reads
 
-
-```math
--\frac{\hbar^2}{2m}\,\frac{d^2\psi}{dx^2} + U\,\psi = E\,\psi
-```
-
+$`\displaystyle -\frac{\hbar^2}{2m}\,\frac{d^2\psi}{dx^2} + U\,\psi = E\,\psi`$
 
 where:
 - m is the electron's mass, 9.109 × 10⁻³¹ kg,
@@ -314,38 +310,21 @@ This equation is **postulated** (put in by hand, then tested against experiment)
 
 Move terms across:
 
-
-```math
-\frac{d^2\psi}{dx^2} = \frac{2m\,(U - E)}{\hbar^2}\,\psi
-```
-
+$`\displaystyle \frac{d^2\psi}{dx^2} = \frac{2m\,(U - E)}{\hbar^2}\,\psi`$
 
 In the gap the electron is short of energy: U − E is positive, and for an electron near the top of the filled levels in the metal it is just the work function, U − E ≈ φ. So the right-hand side is a **positive** number times ψ. Give that number a name:
 
-
-```math
-\kappa^2 = \frac{2m\,\varphi}{\hbar^2}, \qquad \kappa = \frac{\sqrt{2m\varphi}}{\hbar}
-```
-
+$`\displaystyle \kappa^2 = \frac{2m\,\varphi}{\hbar^2}, \qquad \kappa = \frac{\sqrt{2m\varphi}}{\hbar}`$
 
 κ ("kappa") is the *decay constant*: it plays the role of the fog's density. The equation is now
 
-
-```math
-\frac{d^2\psi}{dx^2} = \kappa^2\,\psi .
-```
-
+$`\displaystyle \frac{d^2\psi}{dx^2} = \kappa^2\,\psi .`$
 
 ### Step 3: solve it
 
 Try ψ(x) = A e<sup>−κx</sup>, where A is whatever value ψ has at the tip end of the gap. Take the slope twice:
 
-
-```math
-\frac{d\psi}{dx} = -\kappa A e^{-\kappa x}, \qquad
-\frac{d^2\psi}{dx^2} = \kappa^2 A e^{-\kappa x} = \kappa^2\,\psi. \;\checkmark
-```
-
+$`\displaystyle \frac{d\psi}{dx} = -\kappa A e^{-\kappa x}, \qquad \frac{d^2\psi}{dx^2} = \kappa^2 A e^{-\kappa x} = \kappa^2\,\psi. \;\checkmark`$
 
 So this works. (e<sup>+κx</sup> also solves the equation, but it grows across the gap; for a gap of several ångströms it contributes a negligible correction to the crossing chance, and I am dropping it. This is the **assumption** κd ≫ 1, checked below.)
 
@@ -355,31 +334,19 @@ This is the fog: every extra distance Δx multiplies ψ by the same factor e<sup
 
 The chance of finding the electron at the far side of a gap of width d is |ψ(d)|², which is proportional to
 
-
-```math
-e^{-2\kappa d}.
-```
-
+$`\displaystyle e^{-2\kappa d}.`$
 
 (The 2 appears because the chance is ψ *squared*.)
 
 The current I is the number of electrons per second that try to cross, times the chance each one makes it. At small bias voltage the number trying does not depend on d, so
 
-
-```math
-I \propto e^{-2\kappa d}.
-```
-
+$`\displaystyle I \propto e^{-2\kappa d}.`$
 
 ### Step 5: move the tip by Δd
 
 Divide the current at gap d by the current at gap d + Δd:
 
-
-```math
-\frac{I(d)}{I(d+\Delta d)} = \frac{e^{-2\kappa d}}{e^{-2\kappa (d+\Delta d)}} = e^{2\kappa\,\Delta d}.
-```
-
+$`\displaystyle \frac{I(d)}{I(d+\Delta d)} = \frac{e^{-2\kappa d}}{e^{-2\kappa (d+\Delta d)}} = e^{2\kappa\,\Delta d}.`$
 
 The starting gap d has cancelled out, exactly like the torch brightness in the fog. The factor per step depends only on κ and the step.
 
@@ -387,28 +354,15 @@ The starting gap d has cancelled out, exactly like the torch brightness in the f
 
 Take φ = 4.5 eV = 4.5 × 1.602 × 10⁻¹⁹ J = 7.21 × 10⁻¹⁹ J.
 
+$`\displaystyle 2m\varphi = 2 \times 9.109\times10^{-31} \times 7.21\times10^{-19} = 1.314\times10^{-48}\ \text{kg·J}`$
 
-```math
-2m\varphi = 2 \times 9.109\times10^{-31} \times 7.21\times10^{-19} = 1.314\times10^{-48}\ \text{kg·J}
-```
-
-
-
-```math
-\sqrt{2m\varphi} = 1.146\times10^{-24}, \qquad
-\kappa = \frac{1.146\times10^{-24}}{1.055\times10^{-34}} = 1.09\times10^{10}\ \text{m}^{-1} = 1.09\ \text{Å}^{-1}.
-```
-
+$`\displaystyle \sqrt{2m\varphi} = 1.146\times10^{-24}, \qquad \kappa = \frac{1.146\times10^{-24}}{1.055\times10^{-34}} = 1.09\times10^{10}\ \text{m}^{-1} = 1.09\ \text{Å}^{-1}.`$
 
 A handy form of the same result: κ ≈ 0.51 × √(φ in eV), in inverse ångströms.
 
 For Δd = 1 Å:
 
-
-```math
-2\kappa\,\Delta d = 2.17, \qquad e^{2.17} \approx 8.8 .
-```
-
+$`\displaystyle 2\kappa\,\Delta d = 2.17, \qquad e^{2.17} \approx 8.8 .`$
 
 Over the range of work functions for common metals:
 
@@ -494,7 +448,7 @@ A style skill that decides you look lost is worse than no skill.
 
 ## Changelog
 
-### Unreleased
+### v1.2.0
 
 - Feynman now chooses its analogy by three tests: the same structure as the
   subject, familiar enough to need no gloss, and hard to misread. Each answer
@@ -515,6 +469,11 @@ A style skill that decides you look lost is worse than no skill.
   results, and warns once about the standard mistake. New evals S1 and S2.
 - README samples re-run on this version, in English and Chinese, so they show the
   new analogy and claim-labelling rules in practice.
+- Full eval set run on this version: 15/15 pass (table in
+  [PR #7](https://github.com/ljx-chase/pick-your-professor/pull/7)).
+- README equations use GitHub's `` $`…`$ `` inline form, and `` $`\displaystyle …`$ ``
+  for display equations, after the re-run samples came through with forms GitHub
+  does not render inside `<details>`.
 
 ### v1.1.0
 

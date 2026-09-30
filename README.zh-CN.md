@@ -4,7 +4,7 @@
 
 <p>
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License"/></a>
-<img src="https://img.shields.io/badge/version-v1.1.0-blue?style=flat-square" alt="Version"/>
+<img src="https://img.shields.io/badge/version-v1.2.0-blue?style=flat-square" alt="Version"/>
 <a href="https://github.com/ljx-chase/pick-your-professor/stargazers"><img src="https://img.shields.io/github/stars/ljx-chase/pick-your-professor?style=flat-square&color=yellow" alt="Stars"/></a>
 </p>
 
@@ -117,18 +117,14 @@ section of the repo's AGENTS.md.
 
 ## 最后给出公式（可跳过）
 
+$`\displaystyle I \propto e^{-2\kappa d},\qquad \kappa=\frac{\sqrt{2m\varphi}}{\hbar}`$
 
-```math
-I \propto e^{-2\kappa d},\qquad \kappa=\frac{\sqrt{2m\varphi}}{\hbar}
-```
+- $`I`$：隧穿电流；$`d`$：针尖到样品的距离；
+- $`\varphi`$：禁区高度，近似取功函数；$`m`$：电子质量；
+- $`\hbar`$：约化普朗克常数，量子力学里的基本常数，约 $`1.05\times10^{-34}`$ 焦耳·秒；
+- $`e`$：自然常数，约 2.718；$`\kappa`$：电子的"波"在禁区里每单位距离衰减得多快。
 
-
-- $I$：隧穿电流；$d$：针尖到样品的距离；
-- $\varphi$：禁区高度，近似取功函数；$m$：电子质量；
-- $\hbar$：约化普朗克常数，量子力学里的基本常数，约 $1.05\times10^{-34}$ 焦耳·秒；
-- $e$：自然常数，约 2.718；$\kappa$：电子的"波"在禁区里每单位距离衰减得多快。
-
-前面的因子 2 的来源是：电子出现的机会等于描述它的那个波的高度的**平方**。所以波高每埃乘 $e^{-\kappa}$，机会（也就是电流）每埃乘 $e^{-2\kappa}$。代入数值，得到一个好记的式子：$\kappa \approx 0.51\sqrt{\varphi/\text{eV}}$ 每埃。取 $\varphi=5$ eV，得 $\kappa\approx1.15$ Å⁻¹，于是 $e^{2\kappa}\approx e^{2.3}\approx10$。
+前面的因子 2 的来源是：电子出现的机会等于描述它的那个波的高度的**平方**。所以波高每埃乘 $`e^{-\kappa}`$，机会（也就是电流）每埃乘 $`e^{-2\kappa}`$。代入数值，得到一个好记的式子：$`\kappa \approx 0.51\sqrt{\varphi/\text{eV}}`$ 每埃。取 $`\varphi=5`$ eV，得 $`\kappa\approx1.15`$ Å⁻¹，于是 $`e^{2\kappa}\approx e^{2.3}\approx10`$。
 
 **一句话**：电子穿过真空的机会，是每一埃都要再"打一次折"，而金属约 4–5 eV 的功函数让每次打折大约是十分之一。
 
@@ -155,57 +151,33 @@ I \propto e^{-2\kappa d},\qquad \kappa=\frac{\sqrt{2m\varphi}}{\hbar}
 
 在势垒内部，定态薛定谔方程是
 
-
-```math
--\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2} + V_0\,\psi = E\,\psi ,
-```
-
+$`\displaystyle -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2} + V_0\,\psi = E\,\psi ,`$
 
 其中 ψ(*x*) 是电子的波函数，|ψ|² 给出在 *x* 处找到电子的概率密度；*m* 是电子质量；ħ 是约化普朗克常数；*V*₀ 是势垒顶的能量，*E* 是电子能量，按假设 1 有 *V*₀ − *E* = φ。
 
 整理一下：
 
-
-```math
-\frac{d^2\psi}{dx^2} = \kappa^2\,\psi, \qquad \kappa \equiv \frac{\sqrt{2m\,(V_0 - E)}}{\hbar} = \frac{\sqrt{2m\varphi}}{\hbar}.
-```
-
+$`\displaystyle \frac{d^2\psi}{dx^2} = \kappa^2\,\psi, \qquad \kappa \equiv \frac{\sqrt{2m\,(V_0 - E)}}{\hbar} = \frac{\sqrt{2m\varphi}}{\hbar}.`$
 
 **[定义]** κ 叫做**衰减常数**，单位是长度的倒数。
 
 这个方程的解是 e<sup>−κx</sup> 和 e<sup>+κx</sup>。**假设 2**（此处引入）：势垒足够厚，κ*d* ≫ 1。在这个条件下，通过边界匹配确定下来的增长解系数很小，波函数在势垒内实际上就是 e<sup>−κx</sup>。于是从势垒一侧走到另一侧，
 
-
-```math
-\frac{\psi(d)}{\psi(0)} \approx e^{-\kappa d}.
-```
-
+$`\displaystyle \frac{\psi(d)}{\psi(0)} \approx e^{-\kappa d}.`$
 
 电子出现在另一侧的概率正比于 |ψ|²，所以**透射系数** *T*（**[定义]** 一个入射电子穿过势垒的概率）满足
 
-
-```math
-T \propto e^{-2\kappa d}.
-```
-
+$`\displaystyle T \propto e^{-2\kappa d}.`$
 
 **[结果]** 如果精确求解矩形势垒问题，再取 κ*d* ≫ 1 的极限，会得到
 
-
-```math
-T \approx \frac{16\,E\,(V_0-E)}{V_0^2}\; e^{-2\kappa d}.
-```
-
+$`\displaystyle T \approx \frac{16\,E\,(V_0-E)}{V_0^2}\; e^{-2\kappa d}.`$
 
 指数前面的系数和 *d* 无关。*d* 的全部影响都在指数里。
 
 **假设 3**（此处引入）：偏压 *V*（即针尖和样品之间所加的电压）很小，eV ≪ φ。这时参与隧穿的只是费米能级附近宽度为 eV 的一窄条能量内的电子，它们的 κ 基本相同。电流等于"可用的电子数 × 每个电子的透射概率"，所以
 
-
-```math
-I \propto V\, e^{-2\kappa d}.
-```
-
+$`\displaystyle I \propto V\, e^{-2\kappa d}.`$
 
 > 你可能会问：可用的电子数（样品和针尖的*态密度*，即单位能量内的电子态数目）不也应该出现在公式里吗？确实会出现。但它决定的是指数前面的系数，与 *d* 基本无关。我们这里关心的是电流随 *d* 怎么变，所以先把它放在一边。
 
@@ -243,22 +215,22 @@ I \propto V\, e^{-2\kappa d}.
 <details>
 <summary><b>Landau（朗道）</b></summary>
 
-**结论：** 低偏压下 $I \propto e^{-2\kappa d}$，$\kappa = \sqrt{2m\phi}/\hbar \approx 0.512\,\sqrt{\phi\,[\text{eV}]}\ \text{Å}^{-1}$。取 $\phi \approx 4\text{–}5$ eV，得 $2\kappa \approx 2.0\text{–}2.3\ \text{Å}^{-1}$，所以 $\Delta d = 1$ Å 对应的电流比为 $e^{2\kappa} \approx 8\text{–}10$。正好一个数量级要求 $2\kappa = \ln 10$，即 $\phi \approx 5.1$ eV。
+**结论：** 低偏压下 $`I \propto e^{-2\kappa d}`$，$`\kappa = \sqrt{2m\phi}/\hbar \approx 0.512\,\sqrt{\phi\,[\text{eV}]}\ \text{Å}^{-1}`$。取 $`\phi \approx 4\text{–}5`$ eV，得 $`2\kappa \approx 2.0\text{–}2.3\ \text{Å}^{-1}`$，所以 $`\Delta d = 1`$ Å 对应的电流比为 $`e^{2\kappa} \approx 8\text{–}10`$。正好一个数量级要求 $`2\kappa = \ln 10`$，即 $`\phi \approx 5.1`$ eV。
 
 **推导要点：**
 
-- 一维矩形势垒，$E_F$ 附近电子满足 $\psi \propto e^{-\kappa z}$，透射概率 $T \propto |\psi(d)|^2 = e^{-2\kappa d}$（WKB 近似，$\kappa d \gg 1$）。
-- Bardeen 转移哈密顿量加 Tersoff–Hamann（s 波针尖）：$I \propto V\,\rho_t(E_F)\,\rho_s(\mathbf r_0, E_F)$，且 $\rho_s(\mathbf r_0) \propto e^{-2\kappa(R+d)}$，指数与上式相同。
-- 带横向动量的态衰减更快，$\kappa_{\text{eff}} = \sqrt{\kappa^2 + k_\parallel^2}$，所以电流主要来自 $\bar\Gamma$ 附近的态；这是 $I(z)$ 为单一指数的原因，也是垂直分辨率约 0.01 Å 量级的来源。
-- 势垒高度 $\phi$ 取针尖与样品功函数的平均值；指数前因子对 $d$ 的依赖是幂律（Simmons），相对指数可忽略。
+- 一维矩形势垒，$`E_F`$ 附近电子满足 $`\psi \propto e^{-\kappa z}`$，透射概率 $`T \propto |\psi(d)|^2 = e^{-2\kappa d}`$（WKB 近似，$`\kappa d \gg 1`$）。
+- Bardeen 转移哈密顿量加 Tersoff–Hamann（s 波针尖）：$`I \propto V\,\rho_t(E_F)\,\rho_s(\mathbf r_0, E_F)`$，且 $`\rho_s(\mathbf r_0) \propto e^{-2\kappa(R+d)}`$，指数与上式相同。
+- 带横向动量的态衰减更快，$`\kappa_{\text{eff}} = \sqrt{\kappa^2 + k_\parallel^2}`$，所以电流主要来自 $`\bar\Gamma`$ 附近的态；这是 $`I(z)`$ 为单一指数的原因，也是垂直分辨率约 0.01 Å 量级的来源。
+- 势垒高度 $`\phi`$ 取针尖与样品功函数的平均值；指数前因子对 $`d`$ 的依赖是幂律（Simmons），相对指数可忽略。
 
-**实验量：** 表观势垒高度 $\phi_A = \dfrac{\hbar^2}{8m}\left(\dfrac{d\ln I}{dz}\right)^2$，用 $I(z)$ 谱或 $z$ 调制锁相测量。$\phi_A$ 常常低于体功函数（典型 1–4 eV），因此实测每埃变化常为 3–10 倍，而不总是 10 倍。
+**实验量：** 表观势垒高度 $`\phi_A = \dfrac{\hbar^2}{8m}\left(\dfrac{d\ln I}{dz}\right)^2`$，用 $`I(z)`$ 谱或 $`z`$ 调制锁相测量。$`\phi_A`$ 常常低于体功函数（典型 1–4 eV），因此实测每埃变化常为 3–10 倍，而不总是 10 倍。
 
 **适用条件：**
 
-- $eV \ll \phi$。若 $eV \gtrsim \phi$，进入 Fowler–Nordheim 场发射区，$\ln I$ 不再对 $d$ 线性。
-- $d \gtrsim 3\text{–}4$ Å。更近时，镜像势对势垒的圆化、针尖与样品之间的力和弛豫、以及趋近点接触（$G \to G_0 = 2e^2/h$）都会让 $\phi_A$ 下降，指数律失效。
-- 针尖与表面洁净。吸附物或氧化层会显著改变 $\phi_A$。
+- $`eV \ll \phi`$。若 $`eV \gtrsim \phi`$，进入 Fowler–Nordheim 场发射区，$`\ln I`$ 不再对 $`d`$ 线性。
+- $`d \gtrsim 3\text{–}4`$ Å。更近时，镜像势对势垒的圆化、针尖与样品之间的力和弛豫、以及趋近点接触（$`G \to G_0 = 2e^2/h`$）都会让 $`\phi_A`$ 下降，指数律失效。
+- 针尖与表面洁净。吸附物或氧化层会显著改变 $`\phi_A`$。
 
 </details>
 
@@ -294,11 +266,7 @@ I \propto V\, e^{-2\kappa d}.
 **第 0 步：规则。**（假设：这是量子力学，也就是描述电子这类微观粒子的理论的基本规则，这里直接拿来用，不证明。）
 电子用一个*波函数* ψ(x) 描述。它是一个随位置变化的数，它的平方 |ψ(x)|² 给出在位置 x 找到电子的概率。决定 ψ 形状的方程叫*薛定谔方程*，在一维、能量不随时间变化的情形下是
 
-
-```math
--\frac{\hbar^2}{2m}\,\psi''(x) + U(x)\,\psi(x) = E\,\psi(x)
-```
-
+$`\displaystyle -\frac{\hbar^2}{2m}\,\psi''(x) + U(x)\,\psi(x) = E\,\psi(x)`$
 
 各符号的含义：
 
@@ -317,68 +285,40 @@ I \propto V\, e^{-2\kappa d}.
 
 **第 2 步：整理方程。** 把 U − E = φ 代进去，移项：
 
-
-```math
-\psi'' = \frac{2m\varphi}{\hbar^2}\,\psi \equiv \kappa^2\,\psi, \qquad \kappa = \frac{\sqrt{2m\varphi}}{\hbar}
-```
-
+$`\displaystyle \psi'' = \frac{2m\varphi}{\hbar^2}\,\psi \equiv \kappa^2\,\psi, \qquad \kappa = \frac{\sqrt{2m\varphi}}{\hbar}`$
 
 κ 是一个新名字，单位是“1/长度”，它的倒数就是波函数衰减的特征长度。
 
 **第 3 步：解方程。** 什么函数求两次导数之后等于它自己乘上一个正数？指数函数 e<sup>−κx</sup> 和 e<sup>+κx</sup>（e ≈ 2.718，是自然常数）。验证一下：
 
-
-```math
-\frac{d^2}{dx^2}e^{-\kappa x} = \kappa^2 e^{-\kappa x}
-```
-
+$`\displaystyle \frac{d^2}{dx^2}e^{-\kappa x} = \kappa^2 e^{-\kappa x}`$
 
 所以缝里的一般解是 ψ = A e<sup>−κx</sup> + B e<sup>+κx</sup>，A、B 是由两侧边界决定的常数。
 
 **第 4 步：哪一项说了算。**（**假设 2**：势垒够厚，κd 远大于 1。实际缝宽 d 一般在 5 到 10 埃，下面会算出 κ ≈ 1 埃⁻¹，所以 κd ≈ 5 到 10，满足。）
 增长项 B e<sup>+κx</sup> 来自波在样品那一侧边界的“反弹”，只在靠近样品的地方才和衰减项同一个量级。它改的是一个与 d 无关、大小在 1 附近的系数，不改变结果随 d 变化的方式。（推导，这里跳过：把矩形势垒严格解出来，结果正是一个这样的系数乘以下面的指数。）于是
 
-
-```math
-\psi(d) \approx \psi(0)\,e^{-\kappa d}
-```
-
+$`\displaystyle \psi(d) \approx \psi(0)\,e^{-\kappa d}`$
 
 **第 5 步：从波函数到电流。** 概率是波函数的平方：
 
-
-```math
-\frac{|\psi(d)|^2}{|\psi(0)|^2} \approx e^{-2\kappa d}
-```
-
+$`\displaystyle \frac{|\psi(d)|^2}{|\psi(0)|^2} \approx e^{-2\kappa d}`$
 
 （**假设 3**：电流正比于这个概率，其他因素，比如电压、两边各有多少电子可用，都与 d 无关。）所以
 
-
-```math
-I \propto e^{-2\kappa d}
-```
-
+$`\displaystyle I \propto e^{-2\kappa d}`$
 
 指数里的 2 就来自“概率是振幅的平方”。（约定：有的书把 2κ 整个叫作电流的衰减常数，有的书写 e<sup>−κd</sup> 指的是振幅。比较不同来源的数字时，先看它说的是振幅还是电流。）
 
 **第 6 步：比较两个距离。**
 
-
-```math
-\frac{I(d+\Delta d)}{I(d)} = e^{-2\kappa\,\Delta d}
-```
-
+$`\displaystyle \frac{I(d+\Delta d)}{I(d)} = e^{-2\kappa\,\Delta d}`$
 
 d 本身消掉了。这就是墨镜里“第十片和第一片效果一样”的那句话，现在作为推导结果出现。
 
 **第 7 步：代入数字。** 取 φ = 4.5 eV = 7.21×10⁻¹⁹ J：
 
-
-```math
-\kappa = \frac{\sqrt{2 \times 9.11\times10^{-31} \times 7.21\times10^{-19}}}{1.055\times10^{-34}} \approx 1.09\times10^{10}\ \text{m}^{-1} = 1.09\ \text{埃}^{-1}
-```
-
+$`\displaystyle \kappa = \frac{\sqrt{2 \times 9.11\times10^{-31} \times 7.21\times10^{-19}}}{1.055\times10^{-34}} \approx 1.09\times10^{10}\ \text{m}^{-1} = 1.09\ \text{埃}^{-1}`$
 
 Δd = 1 埃 时，2κΔd ≈ 2.17，所以电流比是 e<sup>2.17</sup> ≈ **8.8**。
 
@@ -436,12 +376,14 @@ d 本身消掉了。这就是墨镜里“第十片和第一片效果一样”的
 
 ## 更新记录
 
-### 未发布
+### v1.2.0
 
 - Feynman 写法按三条标准挑选类比：与主题结构相同、日常熟悉到本身无需解释、不易被误解。每个回答都说明类比借用了什么，并排除它最容易引出的错误结论；如果没有结构相同的日常系统，就直说，直接描述现象。依据《费曼物理学讲义》（第一卷 §4-1，第二卷 §12-1 与 §12-7，第三卷 §1-1）。起因是维护者的反馈：一个贴切却容易被误解的类比，同样不合格。
 - 新增评测 F1（类比质量）和 F2（不硬凑类比），新增示例 7。
 - 新增 `references/style-feynman.md` 与 `references/style-griffiths.md`：分别整理《费曼物理学讲义》第三卷和 Griffiths & Schroeter《量子力学概论》（第 3 版）的讲解方法，附书中章节号，在对应写法的第一个回答之前加载。保留讲解手法，不模仿作者的语气，因为写法是一套规则，不是模仿秀。其中两条规则写进了 `SKILL.md`：Feynman 写法要标明每个说法是观测、推导、假设还是约定，且从不编造机制；Griffiths 写法要标明定义、约定和结论，并对最常见的错误提醒一次。新增评测 S1、S2。
 - README 中的回答样例用这个版本重新跑过（中英文各一套），可以直接看到新的类比规则和“标明说法性质”的规则怎么落地。
+- 用这个版本跑完整套评测：15/15 通过（结果表见 [PR #7](https://github.com/ljx-chase/pick-your-professor/pull/7)）。
+- README 里的公式统一改用 GitHub 能渲染的 `` $`…`$ `` 行内写法，独立公式用 `` $`\displaystyle …`$ ``；重新生成的样例里有几种写法在 `<details>` 中显示不出来。
 
 ### v1.1.0
 
