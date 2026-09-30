@@ -63,6 +63,56 @@ concrete.
 **Every analogy states where it stops working.** An analogy the reader
 over-trusts is worse than none.
 
+### Choosing the analogy
+
+The analogy is the whole Feynman register: the reader learns the shape of the
+idea from it, so a bad one teaches the wrong shape. Apply all three tests before
+writing its first sentence. An analogy that fails any one is replaced, not
+patched.
+
+1. **Apt: same structure, not same look.** The parallel system must obey the
+   same relation as the subject in the part that carries the answer: the same
+   conservation, the same proportionality, the same trade-off between two
+   quantities. Check it by running the argument inside the analogy. Every step
+   taken there must be a true step about the subject. Surface resemblance
+   ("both are flows", "both are waves") is not structure. The licence is the
+   one in the title of FLP Vol. II §12-1, "The same equations have the same
+   solutions", and it extends only as far as the equations are shared.
+2. **Easy: already known, needs no gloss.** Take the system from ordinary life
+   (coins, queues, a crowd leaving a stadium, a bank account, water in a pipe),
+   not from another field. An analogy that needs its own explanation spends the
+   budget it was meant to save. Use one system per answer; do not switch
+   analogies midway or stack two.
+3. **Hard to misread: say what it borrows, and cut off the wrong inference.**
+   Name, in plain words, the one or two features the analogy borrows. Then name
+   the most tempting wrong conclusion a reader would draw from it, and say why
+   it is wrong. The model is FLP Vol. I §4-1: conservation of energy is carried
+   on a child's indestructible blocks, one complication at a time (blocks hidden
+   in a box, blocks thrown in the bathwater), and then the obvious misreading,
+   that energy is a kind of stuff, is cut off: there are no blocks. Energy is a
+   number that comes out the same, not a substance and not a mechanism.
+
+**Do not read the analogy's mechanism back into the subject.** Two systems that
+share an equation do not share a cause. In FLP Vol. II §12-7 Feynman asks why so
+many different phenomena obey the same equations, and his answer is not that
+they are secretly the same thing: the equations are smoothed-out, large-scale
+descriptions, and what the phenomena have in common is the space those
+descriptions are written in. Borrow the equation's consequences, never the
+other system's parts.
+
+**When nothing familiar has the structure, say so.** Some subjects have no
+everyday parallel. FLP Vol. III §1-1 opens quantum behavior by saying that
+things on a very small scale "behave like nothing that you have any direct
+experience about", and then describes what experiments show instead of lending
+the reader a picture that would mislead. Do the same: say plainly that no
+familiar system behaves this way, then describe the behavior directly, still at
+zero budget, through what a measurement would show. An analogy for one sub-part
+is allowed if it passes the three tests and its limit is stated.
+
+Sources: *The Feynman Lectures on Physics*, online edition,
+<https://www.feynmanlectures.caltech.edu> — Vol. I ch. 4 (`I_04.html`), Vol. II
+ch. 12 (`II_12.html`), Vol. III ch. 1 (`III_01.html`).
+
 **Equations are optional and come last.** Prefer order-of-magnitude statements
 and limiting cases over exact expressions. Steps may be skipped, but say so:
 "we are not going to prove this here."
@@ -168,7 +218,10 @@ almost never get exactly that; typical runs land a dozen or so either side, and
 about 95 runs in 100 land somewhere between 180 and 220, that is, between 45%
 and 55% heads. So a count of 208 heads, 52%, is entirely ordinary for a coin
 that is not biased at all. Now make the coin stand for the country: each flip is
-one person picked at random, heads is "yes". A 52% poll is a 208-heads run. It
+one person picked at random, heads is "yes". A 52% poll is a 208-heads run. The
+coin borrows one thing only, how far a count wanders by luck; it does not say
+the country is split 50/50, since the real share is exactly what we do not
+know. It
 cannot tell a fair coin from one tilted a few points either way; the honest
 range for the true share is roughly 47% to 57%, and that range includes 50%. So
 this poll does not show a majority. Here the coin stops working as a picture: a

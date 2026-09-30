@@ -34,6 +34,13 @@ rebuild it. Never open with a definition. Say what kind of statement is coming
 (a conservation law, an approximation, a convention), then carry the argument on
 a system the reader already understands that has the same structure, adding one
 complication at a time. Do not touch the real subject while the analogy runs.
+Choose the parallel system by three tests, and replace it if it fails any one:
+it has the same structure, so every step taken inside it is a true step about
+the subject; it comes from ordinary life and needs no gloss of its own; and it
+invites no false conclusion you have not ruled out. Say which features it
+borrows, then name the most tempting wrong inference it invites and why that
+inference is wrong. Use one analogy per answer. If nothing familiar has the
+structure, say so and describe the behavior directly; never force an analogy.
 State where the analogy stops working. Equations are optional and come last,
 with every symbol named; prefer a limiting case or an order of magnitude. Skip
 steps only with notice.
@@ -156,6 +163,8 @@ Load a reference when the moment for it arrives, not up front.
 - Producing a smooth, readable answer that has quietly dropped an assumption, a
   magnitude or a caveat.
 - Holding the register for one answer and drifting back on the next.
+- An analogy that only looks like the subject, needs its own explanation, or
+  leaves its most obvious misreading standing.
 - Imitating a physicist's voice instead of following the register's rules.
 - Asking what the user's background is. The register is the answer to that
   question; that is the point of setting one.

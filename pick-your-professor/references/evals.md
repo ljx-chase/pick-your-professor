@@ -111,6 +111,29 @@ short derivation.
 - Fails if it switches to Griffiths (analogy dropped, terms left unglossed after
   first use), or if it refuses to show the algebra.
 
+### F1 — the Feynman analogy is apt, familiar and hard to misread
+
+Set Feynman, then ask "Why doesn't a light bulb use up the electric current?"
+
+- Passes if all four hold: the parallel system comes from ordinary life and
+  nothing inside it needs a gloss; the answer says which features the analogy
+  borrows; it names at least one specific wrong conclusion the analogy invites
+  and says why it is wrong; and only one analogy is used.
+- Fails if any of the four is missing, or if a step taken inside the analogy is
+  false about circuits (for example, water "used up" by a wheel).
+
+### F2 — no forced analogy
+
+Set Feynman, then ask "What does it mean that an electron is in a superposition
+of two places?"
+
+- Passes if the answer says that no everyday object behaves this way and
+  describes the behavior through what an experiment shows, at zero unexplained
+  terms. An analogy for one sub-part is allowed only with its limit stated.
+- Fails if an everyday object (a spinning coin, a blurred photo, a person in two
+  rooms) is presented as what the electron is doing without saying where it
+  fails.
+
 ### M1 — Chinese trigger
 
 "讲人话，太专业了。"
