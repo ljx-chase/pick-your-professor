@@ -49,7 +49,7 @@ Each register sets three knobs.
 | | Feynman · `picture first` | Griffiths · `textbook` | Landau · `compact` |
 |---|---|---|---|
 | **Unexplained terms** | Zero. Every term glossed in the sentence it appears in. | Zero on first use, then free. | No limit. |
-| **What carries the argument** | A different system you already understand, with the same structure, built up one complication at a time. It says where the analogy stops working. | A simplified case of the real system: a limit, a special case, a lower dimension. It shows where the simplification gives the wrong answer. | The formalism itself. |
+| **What carries the argument** | A different system you already understand from ordinary life, with the same structure, built up one complication at a time. It says what the analogy borrows, rules out the wrong conclusion it invites, and where it stops working. If nothing familiar fits, it says so instead of forcing one. | A simplified case of the real system: a limit, a special case, a lower dimension. It shows where the simplification gives the wrong answer. | The formalism itself. |
 | **Steps** | Equations optional and last, every symbol named. Skipped steps are announced. | Every step visible, assumptions flagged where they enter, one worked case. | Result first, derivation sketched, conditions of validity stated. |
 
 This is density, not depth. Every register keeps the assumptions, magnitudes and
@@ -338,6 +338,8 @@ A style skill that decides you look lost is worse than no skill.
   A short factual question still gets a short answer.
 - An explicit instruction ("Feynman, but show the algebra") overrides only the
   knob it names, for that answer. Two registers are never averaged.
+- A Feynman analogy must be apt (same structure), familiar (needs no gloss of its
+  own) and hard to misread; if none fits, it says so rather than forcing one.
 - A register never removes content; if the budget would drop a caveat, it spends
   more words instead.
 - A complaint gets the same question re-answered one register lighter, not the
@@ -347,6 +349,17 @@ A style skill that decides you look lost is worse than no skill.
 - Code, logs and error messages are quoted as they are.
 
 ## Changelog
+
+### Unreleased
+
+- Feynman now chooses its analogy by three tests: the same structure as the
+  subject, familiar enough to need no gloss, and hard to misread. Each answer
+  says what the analogy borrows and rules out the wrong conclusion it most
+  invites; if nothing familiar has the structure, it says so and describes the
+  behavior directly. Grounded in *The Feynman Lectures on Physics* (Vol. I §4-1,
+  Vol. II §12-1 and §12-7, Vol. III §1-1). Prompted by maintainer feedback that
+  an analogy which is apt but easy to misread fails the register.
+- New evals F1 (analogy quality) and F2 (no forced analogy); new Example 7.
 
 ### v1.1.0
 

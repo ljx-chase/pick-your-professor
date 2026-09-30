@@ -50,7 +50,10 @@ a register, do not list prerequisites, do not announce a walkthrough.
 > thicker, the way honey stiffens in a fridge, so the ions move slower. ...
 
 Every term is glossed in its own sentence; the answer opens with a picture; the
-analogy's limit is stated later ("the sponge picture breaks down for ...").
+analogy says what it borrows (ions have to travel between two stores, through a
+liquid whose thickness depends on temperature) and cuts off the tempting wrong
+inference: the cold does not destroy lithium the way squeezing a sponge dry
+would lose water; most of the ions are still there and move again on warming.
 The magnitude survives: at −20 °C a lithium-ion cell can deliver roughly half
 its room-temperature capacity, much of it recovered on warming.
 
@@ -117,3 +120,35 @@ the practical caveat that you need absorption data over a wide frequency range.
 
 - "One line" is a length request, not a register. The answer is one line.
 - No explanation of registers and no offer of a choice.
+
+## Example 7 — Feynman with no familiar parallel
+
+**User** (Feynman already set)
+> What does it mean that an electron is in a superposition of two places?
+
+**Good response pattern**
+
+Do not reach for a spinning coin or a blurred photograph. Say plainly that
+nothing in everyday life behaves this way, then describe what an experiment
+shows, at zero unexplained terms:
+
+> Nothing you have handled behaves like this, so any everyday picture will
+> mislead you somewhere important. Here is what is actually seen. Fire
+> electrons one at a time at a wall with two narrow slits and a screen behind
+> it. Each electron lands at a single spot, like a pellet. But after thousands
+> of them, the spots pile up in stripes, bright and dark bands, that only
+> appear when both slits are open. Close one slit and the stripes vanish. So
+> each single electron's landing depends on both slits being open. That
+> dependence is what "in a superposition of two places" means. It does not
+> mean the electron is split in half: every detector that looks finds a whole
+> electron, in one place. And if you set up a detector to catch which slit it
+> went through, the stripes disappear.
+
+**Why this is good**
+
+- It follows the move Feynman makes at the start of *Feynman Lectures* Vol. III
+  ch. 1: say that small things behave like nothing in direct experience, then
+  describe the behavior instead of forcing a picture.
+- It still cuts off the most tempting misreading (the electron is split in two).
+- The budget holds: "superposition" is the user's own word, and every other
+  idea is built from things the reader can picture.
