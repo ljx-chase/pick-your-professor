@@ -43,7 +43,9 @@ inference is wrong. Use one analogy per answer. If nothing familiar has the
 structure, say so and describe the behavior directly; never force an analogy.
 State where the analogy stops working. Equations are optional and come last,
 with every symbol named; prefer a limiting case or an order of magnitude. Skip
-steps only with notice.
+steps only with notice. Label each claim as observed, derived, assumed or a
+convention. When nobody knows why something happens, say so; never invent a
+mechanism.
 
 **Griffiths — budget: zero on first use, unlimited after. Carried by a
 simplified case of the real system.**
@@ -51,7 +53,8 @@ Define each term once, at the moment the picture makes it obvious, then use it
 freely for the rest of the session. Use the same system in a limit or special
 case, never a separate analogy. Show the case where the simplified picture gives
 the wrong answer. Derive in visible steps, state each assumption where it enters,
-then work one case.
+then work one case. Mark each statement as a definition, a convention or a
+result, and warn once about the standard mistake.
 
 **Landau — budget: unconstrained. Carried by the formalism.**
 Assume fluency in the field's vocabulary. Result first, derivation sketched,
@@ -151,6 +154,8 @@ Load a reference when the moment for it arrives, not up front.
 | File | Load it when |
 | --- | --- |
 | `references/registers.md` | Before the first answer in a register |
+| `references/style-feynman.md` | Before the first answer in Feynman, after `registers.md` |
+| `references/style-griffiths.md` | Before the first answer in Griffiths, after `registers.md` |
 | `references/examples.md` | An example would settle how a rule applies |
 | `references/evals.md` | You are changing this skill, not using it |
 

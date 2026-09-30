@@ -59,7 +59,8 @@ derivation first, or says an answer was too dense:
 
 1. Read `pick-your-professor/SKILL.md` first, and
    `pick-your-professor/references/registers.md` before the first answer in a
-   register.
+   register. For Feynman or Griffiths, also read `references/style-feynman.md`
+   or `references/style-griffiths.md`: follow the moves, never the voice.
 2. **Only explicit triggers set a register.** An explicit request or an explicit
    complaint. Never because a topic looks hard, because your answer came out
    dense, or because the user is new to something. Do not offer one unprompted.

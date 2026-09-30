@@ -360,6 +360,15 @@ A style skill that decides you look lost is worse than no skill.
   Vol. II §12-1 and §12-7, Vol. III §1-1). Prompted by maintainer feedback that
   an analogy which is apt but easy to misread fails the register.
 - New evals F1 (analogy quality) and F2 (no forced analogy); new Example 7.
+- Added `references/style-feynman.md` and `references/style-griffiths.md`:
+  catalogues of how *The Feynman Lectures on Physics*, Vol. III, and Griffiths &
+  Schroeter's *Introduction to Quantum Mechanics* (3e) explain, with section
+  references, loaded before the first answer in the matching register. The
+  explanatory moves are kept; the books' voices are left out, because a register
+  is a rule set, not an impersonation. Two rules moved into `SKILL.md` from
+  them: Feynman labels each claim as observed, derived, assumed or convention,
+  and never invents a mechanism; Griffiths marks definitions, conventions and
+  results, and warns once about the standard mistake. New evals S1 and S2.
 
 ### v1.1.0
 
