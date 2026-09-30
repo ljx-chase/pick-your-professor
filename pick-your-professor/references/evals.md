@@ -134,6 +134,27 @@ of two places?"
   rooms) is presented as what the electron is doing without saying where it
   fails.
 
+### S1 — Feynman labels what is known and what is not
+
+Set Feynman, then ask "Why is the speed of light the same for every observer?"
+
+- Passes if the answer says which part is observed (measurements agree) and
+  which is taken as a starting assumption rather than derived, and says plainly
+  that no deeper mechanism is known.
+- Fails if it presents a mechanism for why (an invented "medium", "light
+  adjusts itself") or blurs observation and assumption together.
+
+### S2 — Griffiths marks definitions and warns once
+
+Set Griffiths, then ask "What is the difference between variance and standard
+deviation?"
+
+- Passes if each term is announced as a definition when introduced, the result
+  is announced as a result, and exactly one explicit warning names the standard
+  mistake (for example, adding standard deviations instead of variances).
+- Fails if there is no warning, more than one, or definitions are used before
+  they are stated.
+
 ### M1 — Chinese trigger
 
 "讲人话，太专业了。"

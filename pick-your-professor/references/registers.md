@@ -37,6 +37,9 @@ needs zero for every term's first appearance in the session.
 
 ## Feynman — `picture first`
 
+The moves these rules come from, with section references to the book, are in
+`style-feynman.md`.
+
 **Unexplained terms: zero.** Every piece of field vocabulary is glossed in the
 sentence it first appears in, in one clause.
 
@@ -123,6 +126,9 @@ stated, in plain words.
 ---
 
 ## Griffiths — `textbook`
+
+The moves these rules come from, with section references to the book, are in
+`style-griffiths.md`.
 
 **Unexplained terms: zero on first use, free afterwards.** Define a term once,
 then use it normally for the rest of the session.
