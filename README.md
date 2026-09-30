@@ -64,229 +64,373 @@ This is not an onboarding tool. It changes how an answer is written, not what ge
 
 ## One question, three registers
 
-The replies below come from test runs of this version: a fresh session with the
-skill installed, one run each. The wording is unedited; only the equation markup
-was adapted so that GitHub renders it.
+The replies below come from test runs of this version: a fresh agent session
+with only the skill's files loaded, one run each, with the register named in
+the message. The wording is unedited; only the equation markup was adapted so
+that GitHub renders it.
 
 > *Why does the current in a scanning tunneling microscope change about tenfold
 > when the tip moves just one ångström?*
 
 | | What carries the argument | Length |
 |---|---|---|
-| **Feynman** | A stack of tinted glass: each sheet cuts the light by the same factor | ~860 words |
-| **Griffiths** | Two flat metal slabs with a rectangular barrier between them | ~900 words |
-| **Landau** | I ∝ V e<sup>−2κd</sup>, Tersoff–Hamann, WKB | ~290 words |
-| **Feynman + algebra** | The same glass, then the Schrödinger equation with every symbol named | ~1,340 words |
+| **Feynman** | A stack of tinted glass: each sheet cuts the light by the same factor | ~1,190 words |
+| **Griffiths** | The same setup simplified: a one-dimensional rectangular barrier between two metals | ~1,210 words |
+| **Landau** | I ∝ e<sup>−2κd</sup>, Tersoff–Hamann, WKB | ~350 words |
+| **Feynman + algebra** | Tracing paper thinned into fog, then the Schrödinger equation with every symbol named | ~1,670 words |
 
 All four land on about 8–10× per ångström for a 4–5 eV work function. All four
 keep the same caveats: a small bias, a gap of several ångströms (the current
 levels off near contact), and a measured factor often below 10 on real, less
-clean surfaces.
+clean surfaces. The two Feynman replies also say what the analogy borrows, name
+the wrong conclusion it invites (that the gap absorbs electrons), and label each
+claim as derived, measured or assumed.
 
 <details>
 <summary><b>Feynman</b></summary>
 
-This is a rule about multiplying. Each extra ångström of gap cuts the current by the same *factor*, not by the same *amount*. Two things set the size of that factor: the electron's mass, and how much energy the electron is missing. The numbers below come from a simplified model that gets the size of the effect right.
+**The short answer.** Every extra ångström of gap cuts the current by the *same fraction*, however wide the gap already is. The gap multiplies the current down; it does not subtract from it. How big that fraction is depends on how tightly the metal holds on to its electrons. For ordinary metals that works out to roughly a factor of ten per ångström.
 
-**A stack of tinted glass.** Hold one sheet of dark glass up to a lamp, and say it lets through a third of the light. Put a second sheet behind it. That sheet passes a third of what reaches it, so a ninth gets out. A third sheet leaves a twenty-seventh. Each sheet you add cuts the light by the same factor of 3, however many are already there. So a little extra glass makes a large difference. Now slice the glass thinner. A half-thickness sheet cuts the light by about 1.7, the square root of 3, because two halves have to make one whole. So the real rule is that every millimetre of glass multiplies the light by the same fraction. Last, change the dye: darker glass gives a bigger factor per millimetre.
+What follows is a **derived** result: it comes out of the rules that govern electrons at this scale (quantum mechanics), plus one **measured** number. The tenfold figure itself is **observed** in the lab.
 
-**Back to the microscope.** The empty gap between the tip and the surface plays the part of the glass. An electron inside the metal doesn't have enough energy to be out in the gap at all. Pulling even the most energetic electron out of a typical metal costs about 4 to 5 electron-volts (an electron-volt is the energy one electron gains by moving through one volt). By everyday rules, no electron would ever cross.
+---
 
-Quantum mechanics is the set of rules for things as small as electrons. It describes an electron as a wave. When a wave meets a region it doesn't have the energy to enter, it doesn't stop dead at the edge. It fades inside, dropping by the same factor for each ångström, just like the light in the glass. If the gap is thin enough that the wave hasn't faded to nothing, part of it reaches the tip, and the electron has a small chance of turning up there. That crossing is the "tunneling" in the microscope's name.
+### A stack of tinted glass
 
-**The numbers.** For an electron missing about 4.5 electron-volts, the wave's height drops by about a factor of 3 per ångström. The chance of finding the electron at a spot goes as the square of the wave's height there. That is a basic rule of quantum mechanics, and we won't prove it here. So the chance of crossing, and with it the current, drops by about 3 × 3 ≈ 9 to 10 per ångström. That is the tenfold.
+Leave the microscope aside for a moment and think about sheets of tinted glass.
 
-The "darker dye" stands for a bigger energy shortfall, which makes the wave fade faster:
-- a metal that needs 4 electron-volts gives about 8× per ångström;
-- one that needs 5 gives about 10×.
+Say one sheet lets through a third of the light that hits it. Put a second sheet behind it. The second sheet also passes a third of what *reaches* it, so a ninth gets through. Three sheets pass a twenty-seventh, and four pass an eighty-first. Adding one sheet never takes away a fixed *amount* of light. It divides what is left by three. That holds whether the stack is two sheets thick or twenty.
 
-**Why an ångström.** Three things fix the distance over which the wave fades: the electron's mass, the energy shortfall, and Planck's constant (the number that sets how large quantum effects are). The same three things set the size of atoms. So the fading distance comes out atom-sized, around an ångström.
+**First complication: make the sheets thinner.** Slice each sheet in half, so each half-sheet passes a bit more than half the light (about 58%, because 58% of 58% is a third). A given *thickness* of glass still divides the light by three. The count of sheets stops mattering. What matters is the fraction lost per millimetre, and the loss compounds smoothly with thickness.
 
-**Where the glass stops working.** Tinted glass soaks up the light it blocks and turns it into heat. The gap soaks up nothing. Electrons that fail to cross just bounce back into the metal, and the ones that do cross arrive with all their energy. The fading measures how likely a crossing is, not energy lost on the way.
+**Second complication: use darker glass.** Darker glass loses a bigger fraction per millimetre, and because the losses compound, a small difference in darkness turns into a big difference after a few millimetres. At one third per sheet, two sheets pass a ninth. At one fifth per sheet, two sheets pass a twenty-fifth.
 
-**What this assumes, and where it fails.**
-- **Flat wall.** It treats the gap as a flat wall exactly as high as the energy needed to pull an electron out. Near a metal the real wall is lower and rounded. That's because an electron close to a metal shifts the metal's own charges around, and those shifted charges pull it back. So measured factors are often below 10, anywhere from about 3 to 10 per ångström, depending on the tip, the surface and how clean they are.
-- **Small voltage.** It assumes the voltage between tip and surface, usually a few thousandths of a volt up to a volt or two, is small next to the 4 to 5 electron-volt shortfall. At several volts the wall gets tilted and thinned, and the current follows a different rule.
-- **Normal working gap.** It holds at gaps of roughly 4 to 10 ångströms. If the tip is pushed so close that its end atom almost touches the surface atoms, the atoms start pulling on each other and the wall collapses. Then the current stops rising tenfold per ångström and levels off.
+That is the whole shape of the answer. Here is how it maps onto the microscope.
 
-**In symbols, if you want them:** current ∝ e<sup>−2κd</sup>.
-- "∝" means "goes in proportion to."
-- e ≈ 2.718, and e raised to a power that grows with d is the formula way of saying "multiply by the same fraction for every bit of d."
-- d is the width of the gap.
-- The 2 is the squaring.
-- κ = √(2mφ)/ħ, where m is the electron's mass, φ is the energy shortfall, and ħ is Planck's constant divided by 2π.
+---
 
-With φ = 4.5 electron-volts, κ ≈ 1.1 per ångström, and e<sup>2 × 1.1</sup> ≈ 9.
+### Back to the microscope
+
+The tip and the surface are two pieces of metal separated by a few ångströms of empty space. By everyday rules an electron cannot cross that space at all. Inside a metal the electrons are held in. Pulling one out takes a definite amount of energy, called the metal's **work function**: about 4 to 5 electron-volts for common metals (one electron-volt is the energy an electron picks up when it is pushed across one volt). This number is **measured**, for example by shining light on the metal and finding the weakest light that knocks electrons out. The small voltage across the microscope gap is far too little to supply that energy.
+
+Quantum mechanics says the electron still gets across sometimes. It describes the electron by a spread-out quantity, usually called its "wave", and the square of the wave's size at a place gives the chance of finding the electron there. In a region where the electron lacks the energy to be, the wave does not stop dead at the edge. It dies away, losing the **same fraction of its size for each equal step** into the region. That is the tinted glass: the empty gap acts as the stack, and each ångström acts as one more sheet. The larger the energy shortfall (the work function), the darker the glass. The current is simply how many electrons make it across per second, so it follows the chance of crossing.
+
+**Why the electron is described by such a wave, nobody knows.** It is the rule that works, and it has been tested to great precision. There is no deeper mechanism behind it that I can give you.
+
+---
+
+### What the glass picture borrows, and the wrong conclusion it invites
+
+The picture borrows exactly two things: **the same fraction lost per equal step of distance**, and **a stronger barrier makes each step cost more**.
+
+The tempting wrong conclusion is that the gap *soaks up* electrons the way tinted glass soaks up light, so that the electrons arriving at the surface are dimmed or weakened. That is wrong. Empty space absorbs nothing. Each electron either crosses with its full energy or bounces back into the tip. What shrinks with each ångström is the *chance* of crossing, and nothing is lost along the way.
+
+**Where the picture stops working:** light absorbed by glass is gone and turns into heat. An electron that fails to cross is reflected and is still there. Also, the "darkness" of the gap is not a fixed property like the tint of glass. It depends on the electron's own energy, so it shifts somewhat with the applied voltage.
+
+---
+
+### The number
+
+With an energy shortfall of 4 to 5 electron-volts, the quantum rule gives this: across each ångström, the size of the wave shrinks by a factor of about 2.8 to 3.1. The chance of crossing goes as the *square* of the size, so the current falls by about **8 to 10 times per ångström**. That is the tenfold you asked about (**derived**, and it agrees with the **observed** value in clean conditions).
+
+For readers who want it as a formula (optional):
+
+current ∝ exp(−2 · d · √(2 · m · φ) / ħ)
+
+Here *d* is the gap width, *m* is the electron's mass, *φ* is the energy shortfall (roughly the work function), *ħ* is Planck's constant divided by 2π (the constant that sets the size of quantum effects), and "exp" means the number e ≈ 2.718 raised to that power. In convenient units, √(2mφ)/ħ ≈ 0.51 × √(φ in electron-volts) per ångström. Plugging in:
+
+| energy shortfall φ | current drops per ångström |
+| --- | --- |
+| 5 eV | ≈ 10× |
+| 4 eV | ≈ 8× |
+| 2 eV | ≈ 4× |
+| 1 eV | ≈ 3× |
+
+### What this assumes, and when it fails
+
+- **The gap is treated as a flat, uniform wall**, with the same shortfall all the way across (**assumed**, a simplification). In reality the pull each electron feels toward the nearby metal rounds off and lowers the wall. So the shortfall that experiments infer from the current, called the "apparent barrier height", often comes out below the work function.
+- **Clean conditions.** With dirt, adsorbed water or other films on the tip or surface, the measured factor per ångström is often well under ten, and a few times per ångström is common. The tenfold figure belongs to clean metal in vacuum.
+- **Small voltage**, much less than the work function. At voltages of several volts the electrons get a real push and the simple picture changes.
+- **A gap of several ångströms.** When the tip comes within a couple of ångströms of contact, the atoms start to touch and the current stops following this rule; it levels off instead of rising another tenfold.
+
+A consequence worth knowing: because each ångström costs a factor of ten, nearly all the current flows through the single atom at the very front of the tip. An atom set back by just one ångström contributes only about a tenth as much. That is why the microscope can see individual atoms, even with a tip that looks blunt by everyday standards.
 
 </details>
 
 <details>
 <summary><b>Griffiths</b></summary>
 
-Griffiths it is.
+**Short answer:** the current depends *exponentially* on the gap, not as a power of it. Each extra ångström multiplies it by a fixed factor, e<sup>−2κ·1 Å</sup>. For a typical metal that factor comes out close to 1/10.
 
-**The simplified system.** Treat the tip and the sample as two flat slabs of the same metal facing each other across a vacuum gap of width d. Inside each metal, electrons fill the available energy levels up to a top filled level, the *Fermi level*. An electron at the Fermi level needs extra energy φ to get out into the vacuum. That energy is the *work function*, about 4–5 electron-volts (eV) for common metals. From that electron's point of view, the gap is a wall: a region d wide where its potential energy would be φ above its total energy. Classically it bounces off every time and the current is zero. Getting through anyway is *tunneling*.
+## The classical version of the same setup
 
-**Step 1: the electron inside the wall.** Describe the electron by its *wavefunction* ψ(x). The squared magnitude |ψ|² is the probability of finding it at position x. Inside the gap, the Schrödinger equation (the equation that fixes ψ for a given energy) reads
+Start with the setup itself. There is a metal tip, a metal sample, and a vacuum gap of width *d* between them, a few ångströms (1 Å = 10⁻¹⁰ m). A small voltage *V*, called the **bias** (definition), is applied across the gap.
 
-  −(ħ²/2m) ψ″ + U ψ = E ψ,  with U − E = φ,
+An electron inside a metal is bound. Pulling it out into the vacuum costs a minimum energy called the **work function** φ (definition). For common metals φ is about 4–5.5 eV. So from the electron's point of view the vacuum gap is a wall of potential energy about φ higher than its own energy. A region like this is called a **potential barrier** (definition).
 
-where m is the electron mass, ħ is Planck's constant divided by 2π, U is the potential energy in the gap and E is the electron's energy. Rearranged, this is ψ″ = κ²ψ, with
+Classically, an electron that doesn't have enough energy to get over the wall bounces back, every time. The classical prediction is therefore a current of **exactly zero** at any gap width: a 5 Å gap and a 50 Å gap block it equally. Quantum mechanics gives a different answer, and the rest of this is about how it differs.
 
-  κ = √(2mφ) / ħ.
+## The simplified case: a rectangular barrier in one dimension
 
-The solutions are e<sup>−κx</sup> and e<sup>+κx</sup>. Neither oscillates; one decays and one grows. κ is the *decay constant*: every distance 1/κ, ψ shrinks by a factor of e.
+Here are the assumptions. Each one gets revisited below.
 
-**Step 2: drop the growing piece.** *Assumption: the barrier is thick, κd ≫ 1.* Matching ψ at the far wall then makes the coefficient of e<sup>+κx</sup> negligible, so across the gap ψ(x) ≈ ψ(0) e<sup>−κx</sup>.
+1. **One dimension.** The electron moves straight across the gap, along *x*.
+2. **Rectangular barrier.** The potential energy is flat at height *U₀* inside the gap, 0 < *x* < *d*, and zero in the metals on either side.
+3. **Low bias.** *eV* ≪ φ, so the voltage barely tilts the top of the barrier. The electrons that carry the current sit at the **Fermi level** (definition: the energy of the highest filled electron states in the metal). For them, *U₀* − *E* ≈ φ.
 
-**Step 3: square it.** The chance that an electron hitting the wall comes out the other side is the *transmission probability* T. It goes as |ψ(d)|² / |ψ(0)|²:
+Inside the barrier the time-independent Schrödinger equation reads
 
-  T ≈ (prefactor) × e<sup>−2κd</sup>.
+  −(ħ²/2m) ψ″(x) + U₀ ψ(x) = E ψ(x).
 
-For a rectangular barrier the prefactor is at most 4. It depends on the electron's energies but, in the thick limit, not on d. The factor 2 in the exponent appears because probability is the *square* of ψ.
+Here ψ is the electron's **wavefunction**, and |ψ|² gives the probability of finding the electron at *x*. *m* is the electron mass, ħ is Planck's constant divided by 2π, and *E* is the electron's energy. Rearranging gives
 
-**Step 4: from T to current.** *Assumption: the bias V, the voltage applied between tip and sample, is small, so eV ≪ φ (e is the electron charge).* Only electrons within eV of the Fermi level have empty levels on the other side to move into. All of them see essentially the same wall. How many arrive per second is set by V and the metals, not by d. So
+  ψ″ = κ² ψ,  with κ ≡ √(2m(U₀ − E)) / ħ.
 
-  I ∝ V e<sup>−2κd</sup>,  which gives  I(d) / I(d + 1 Å) = e<sup>2κ · 1 Å</sup>.
+Call κ the **decay constant** (definition). It has units of inverse length.
 
-Nothing else in I depends on d, so the whole distance sensitivity sits in that exponent.
+This equation doesn't have the oscillating solutions you get outside the barrier. Its solutions are e<sup>−κx</sup> and e<sup>+κx</sup>. So the wavefunction doesn't stop at the wall. It leaks in and falls off exponentially. If the gap is thin enough, a small amplitude survives to the far side, and the electron can appear in the other metal. Crossing a region that is classically forbidden this way is called **tunneling** (definition).
 
-**Objection, parked.** You might object that a real tip is a rounded point ending in a few atoms, and that tip and sample are usually different metals. The shape changes the prefactor, and for a sharp tip it leaves the exponent close to 2κd. Different metals make the wall slightly sloped; to this accuracy, use the average of the two work functions for φ. Neither changes the answer to your question.
+**The load-bearing step.** Across the gap the amplitude drops by a factor of about e<sup>−κd</sup>. A probability is an amplitude squared, so the probability of getting through, the **transmission probability** *T* (definition), drops by the square of that:
 
-**Which situations give which behavior.**
-- **Thick barrier, small bias** (κd ≫ 1, eV ≪ φ): the current changes by e<sup>2κ</sup> per ångström. This is normal STM operation, with gaps of roughly 5–10 Å.
-- **Bias comparable to φ/e (several volts):** the voltage tilts the top of the wall. Electrons near the top of the energy window meet a lower, thinner wall, so κ is no longer one number and the factor per ångström shrinks. Once eV > φ, the wall becomes a triangle and electrons leave by *field emission* (tunneling through a wall whose thickness is set by the electric field rather than directly by d). The distance dependence is then different and weaker.
-- **Gap within a few ångströms of contact:** the exponential picture breaks down (next section).
+  T ≈ 16 (E/U₀)(1 − E/U₀) · e<sup>−2κd</sup>  (result, valid when κd ≫ 1).
 
-**Where the picture gives the wrong answer.** The simple model predicts the current keeps growing tenfold per ångström all the way in. It does not, because of the *image potential*: an electron in the gap is attracted by the opposite charge it induces in the nearby metal surface. This rounds the corners of the wall and lowers it. Near contact, the lowering from both surfaces overlaps until the wall collapses and κd is no longer large. The current then levels off near the *conductance quantum*, G₀ = 2e²/h ≈ 77 µS (about 12.9 kΩ, where h is Planck's constant), which is roughly the conductance of a single-atom contact.
+The prefactor in front changes slowly with *d*. The exponential is what matters. (A fourth assumption comes in here: κd ≫ 1, the thick-barrier limit. At STM gaps κd is about 5–10, so this holds.)
 
-Even at normal gaps, the barrier height fitted from measured I(d) curves, the *apparent barrier height*, often comes out below the textbook work function. On clean surfaces in vacuum it is usually within a couple of eV of φ. In air or on contaminated surfaces it can drop below 1 eV. So the measured factor per ångström ranges from about 10 down to about 3 or less.
+At low bias the current is (number of electrons arriving at the barrier in the energy window *eV*) × (chance each one gets through). The first factor doesn't depend on *d*, so
 
-**Worked case.** Take φ = 4.5 eV, typical of a tungsten tip. For an electron, ħ²/2m = 3.81 eV·Å², so
+  I ∝ V · e<sup>−2κd</sup>  (result).
 
-  κ = √(φ / (ħ²/2m)) = √(4.5 / 3.81) Å⁻¹ = √1.18 Å⁻¹ ≈ 1.09 Å⁻¹.
+Move the tip back by Δ*d* and the *d*-independent parts cancel:
 
-Over 1 Å, ψ falls by e<sup>1.09</sup> ≈ 3.0 and the current falls by e<sup>2.17</sup> ≈ 8.8. With φ = 5 eV, κ ≈ 1.15 Å⁻¹ and the factor is e<sup>2.29</sup> ≈ 9.9.
+  **I(d + Δd) / I(d) = e<sup>−2κ Δd</sup>.**
 
-Checking Step 2's assumption: at a 6 Å gap, κd ≈ 6.5, which is well above 1.
+This is the whole answer. The ratio doesn't depend on where you start, only on how far you move. Every ångström costs the same factor.
 
-So the tenfold figure is the square of a roughly threefold drop in ψ per ångström, and that drop is set by a 4–5 eV work function.
+**Warning:** don't drop the 2. The *amplitude* decays as e<sup>−κd</sup>, but the current follows the *probability*, which decays as e<sup>−2κd</sup>. Leaving out the 2 gives you about a factor of 3 per ångström instead of about 10.
+
+## Worked case
+
+Take φ = 5 eV, a representative metal value. A convenient numerical form is κ [Å⁻¹] ≈ 0.512 √(φ [eV]) (result: this is just the definition of κ with the constants plugged in). Then:
+
+- κ ≈ 0.512 × √5 ≈ 1.15 Å⁻¹
+- 2κ × (1 Å) ≈ 2.29
+- e<sup>2.29</sup> ≈ **9.9**
+
+That is about tenfold per ångström. With φ = 4 eV the same steps give about 7.8. So "about tenfold" is the right rule of thumb for clean metals.
+
+The same numbers show why an STM can measure heights so finely. A change of just 0.1 Å changes the current by a factor of e<sup>0.229</sup> ≈ 1.26, about 26%, which is easy to detect. The instrument's **feedback loop** (definition: circuitry that moves the tip up or down to keep the current constant) turns that sensitivity into height resolution of a few picometres.
+
+## Where the simplified picture gives the wrong answer
+
+The rectangular model says the current keeps rising tenfold per ångström right up to the point where tip and sample touch. **That is wrong.** Two things happen as the gap closes:
+
+- **The barrier isn't rectangular, and it gets lower as the gap shrinks.** An electron in the gap is attracted by the charge it induces in both metals (the *image-charge* effect: the metal's electrons rearrange as if a mirror-image charge of opposite sign sat inside it). This rounds off the corners of the barrier and lowers its top. So the barrier height you measure from how the current changes with distance, usually called the **apparent barrier height** (definition, and a convention: the φ you'd infer from d ln I / d d = −2√(2mφ)/ħ), often comes out below the tabulated work function. It also depends on the state of the tip.
+- **At contact the exponential stops.** Once the barrier has collapsed and a single atom bridges the gap, the current levels off. The conductance settles near the **conductance quantum** G₀ = 2e²/h ≈ 77.5 µS (definition), the value for one fully open conduction channel. It stops growing tenfold per ångström.
+
+The other assumptions fail in their own regimes:
+
+- **High bias** (*eV* comparable to φ): the voltage tilts the barrier so much that κ depends on *V*, and the simple *I* ∝ *V* e<sup>−2κd</sup> no longer holds.
+- **Three dimensions:** an electron with some sideways momentum has less energy left for crossing the gap, so it sees a larger effective κ. The current is therefore carried mostly by electrons heading straight across. This is also why most of the current flows through the one atom at the very front of the tip. That atom sits about 1 Å closer than its neighbours, so it carries about ten times more current, and this is what lets an STM resolve individual atoms.
+
+**Lesson:** a wavefunction decays exponentially through a region where the electron doesn't have enough energy to be. The current goes as the square of that decaying amplitude. With a barrier of about 5 eV, the square falls by about e<sup>−2.3</sup> ≈ 1/10 per ångström.
+
+> *Aside.* The exponential distance dependence and its use for imaging surfaces were the basis of the original STM work by Binnig, Rohrer and co-workers at IBM Zürich in the early 1980s. The first paper is usually cited as G. Binnig, H. Rohrer, Ch. Gerber, E. Weibel, *Phys. Rev. Lett.* **49**, 57 (1982). I'm giving that citation from memory and haven't verified it. For the 3D treatment of the tip, look up the Tersoff–Hamann model (also from memory, unverified).
 
 </details>
 
 <details>
 <summary><b>Landau</b></summary>
 
-The tunnelling current falls off exponentially with the gap:
+$I \propto e^{-2\kappa d}$, with $\kappa = \sqrt{2m\phi}/\hbar$. In practical units $\kappa\,[\text{Å}^{-1}] = 0.512\sqrt{\phi\,[\text{eV}]}$. For $\phi \approx 4\text{–}5$ eV (typical metal work functions), $\kappa \approx 1.0\text{–}1.15\ \text{Å}^{-1}$, so $e^{2\kappa \cdot 1\,\text{Å}} \approx 8\text{–}10$. A factor of exactly 10 per Å corresponds to $2\kappa = \ln 10 = 2.30\ \text{Å}^{-1}$, i.e. $\phi \approx 5.0$ eV.
 
-```math
-I \propto V\,e^{-2\kappa d},\qquad \kappa=\frac{\sqrt{2m\phi}}{\hbar}\;\Rightarrow\; -\frac{d\ln I}{dd}=2\kappa\approx 1.025\sqrt{\phi\,[\mathrm{eV}]}\ \text{Å}^{-1}.
-```
+**Sketch.** Treat the gap as a 1D rectangular barrier of height $\phi \approx (\phi_t + \phi_s)/2$ measured from $E_F$. At low bias, Bardeen's transfer-Hamiltonian result in the Tersoff–Hamann limit (s-wave tip) gives $I \propto V\,\rho_t(E_F)\,\rho_s(\mathbf r_0, E_F)$. Here $\rho_s(\mathbf r_0)$ is the sample LDOS at the tip centre. Outside the surface, $\psi_s \sim e^{-\kappa z}$, so $\rho_s(\mathbf r_0) \propto e^{-2\kappa(d+R)}$. The $d$-dependence of the prefactors is algebraic and negligible next to the exponential. WKB gives the same exponent: $T \approx e^{-2\int \kappa(z)\,dz}$.
 
-Here φ is the effective barrier, roughly (φ<sub>tip</sub> + φ<sub>sample</sub>)/2. For metals, φ ≈ 4–5 eV, so 2κ ≈ 2.0–2.3 Å⁻¹. That gives a factor of e<sup>2κ·1 Å</sup> ≈ 8–10 per ångström. An exact factor of 10 corresponds to φ ≈ 5 eV.
+Inverting gives the apparent barrier height: $\phi_A = \frac{\hbar^2}{8m}\left(\frac{d\ln I}{ds}\right)^2 = 0.952\ \text{eV·Å}^2 \times \left(\frac{d\ln I}{ds}\right)^2$.
 
-**Sketch.** Use Bardeen's transfer Hamiltonian with an s-wave tip (Tersoff–Hamann), at low bias: I ∝ V ρ<sub>t</sub>(E<sub>F</sub>) ρ<sub>s</sub>(r₀, E<sub>F</sub>). The sample states at E<sub>F</sub> decay into vacuum as ψ ∝ e<sup>−κz</sup>, so ρ<sub>s</sub>(r₀) ∝ e<sup>−2κ(d+R)</sup>. A 1D WKB treatment of a rectangular barrier gives the same exponent. Any d-dependence in the prefactor is algebraic and negligible next to the exponential. Components with k<sub>∥</sub> ≠ 0 decay with √(κ² + k<sub>∥</sub>²), so the current comes mainly from k<sub>∥</sub> ≈ 0, and κ is the smallest decay constant available.
+**Validity and corrections.**
+- $eV \ll \phi$. At finite bias the effective barrier is $\approx \phi - e|V|/2$, which lowers $\kappa$. For $eV \gtrsim \phi$ you are in the Fowler–Nordheim regime.
+- States with $k_\parallel \neq 0$ decay faster: $\kappa^2 = 2m\phi/\hbar^2 + k_\parallel^2$. Tunnelling therefore samples near-$\bar\Gamma$ states, and the corrugation of high-$k_\parallel$ Fourier components decays much faster than $I$ does.
+- The image potential rounds and lowers the barrier. Measured $\phi_A$ is typically 1–4 eV rather than the full work function, so the decade-per-Å figure is an upper-end estimate. Under ambient or contaminated conditions, $\phi_A$ can be well below 1 eV.
+- At $d \lesssim 3\text{–}5$ Å the barrier collapses toward point contact, $G \to G_0 = 2e^2/h$, and the exponential law fails. Tip–sample forces also deform the junction, so the true gap differs from the piezo displacement $s$.
+- The exponent assumes elastic, single-barrier tunnelling. Inelastic channels and resonant (adsorbate-mediated) channels modify the prefactor. They do not change the leading $e^{-2\kappa d}$ scaling unless they introduce states inside the barrier.
 
-**Validity.**
-- **Low bias, eV ≪ φ.** At finite bias the barrier is trapezoidal and φ → φ − eV/2. For eV > φ you are in the Fowler–Nordheim regime, where the dependence on d is weaker.
-- **Opaque barrier, κd ≫ 1, with d ≳ 4–5 Å.** The image potential rounds the barrier and lowers it, but d ln I/dd stays close to its work-function value down to a few Å. At smaller gaps the barrier collapses, the apparent barrier height drops, and the conductance saturates near G₀ = 2e²/h at contact.
-- **Clean surfaces.** Measured apparent barrier heights are often only 1–4 eV, which means about 3–8× per Å instead of 10×. Causes include:
-  - adsorbates or contamination, especially in air or liquid;
-  - tip–sample forces, which make the real change in d smaller than the piezo's Δz;
-  - tip states that are not s-like.
-
-  The factor of 10 is the value for clean metal-on-metal surfaces in ultra-high vacuum.
+This steepness is also why lateral resolution comes from roughly the single front-most tip atom: an atom recessed by 1 Å contributes about 10% as much current.
 
 </details>
 
 <details>
 <summary><b>Feynman, but show the algebra</b></summary>
 
-This is an approximate scaling law, and it has two parts. The first is a counting rule about losing the same fraction at every step. The second is a short calculation that tells you how big that fraction is.
+**Short answer:** the chance that an electron gets across the gap drops by the same fraction for every extra ångström of gap, and for the metals normally used that fraction works out to about 1 in 8 to 1 in 10 per ångström. The algebra is below.
 
-**The picture: light through tinted glass**
+## What kind of statement this is
 
-Take a sheet of tinted glass that lets through a third of the light that hits it. With two sheets in a row, a third of a third gets through, which is 1/9. With three sheets it is 1/27. Call the brightness going in B₀, the fraction one sheet lets through f, and the number of sheets N. The brightness coming out is
+It combines two things. One is a **derived** rule: an electron's chance of crossing a gap it does not have enough energy for falls off *exponentially* with the width of the gap (each extra slice of gap multiplies the chance by the same factor). The other is a **measured** number: how much energy it takes to pull an electron out of the metal. Put the two together and the factor of ten comes out. No new idea is needed beyond those two.
 
-  B = B₀ · f<sup>N</sup>
+## A parallel: light through a stack of tracing paper
 
-Adding one more sheet always multiplies the output by f, whether you already had 2 sheets or 200. The ratio from one step to the next doesn't depend on where you are.
+Shine a torch through one sheet of tracing paper, and say one third of the light gets through. Add a second sheet. It sees only the light the first sheet let through, and passes a third of *that*, so 1/9 gets through. A third sheet gives 1/27. The rule is simple: **every sheet you add cuts what you get by the same factor, no matter how many sheets are already there.**
 
-*First complication: the stack becomes one solid block.* Think of the block as many thin slices of thickness s, each letting through the fraction f. A block of thickness x holds x/s slices, so
+First complication: make the sheets thinner and thinner until you have something smooth, like fog. Now every millimetre of fog passes the same fraction of the light that reaches it. That is what "exponential" means: equal steps in thickness give equal *factors*, not equal *amounts*.
 
-  B(x) = B₀ · f<sup>x/s</sup>
+Second complication: make the fog denser. Each millimetre now passes a smaller fraction, so the light dies off faster with distance. How dense the fog is sets the factor per millimetre.
 
-Make the block thicker by an amount Δ and the output drops by the factor f<sup>Δ/s</sup>. Again, that factor is the same however thick the block already was. A quantity that falls by the same factor for every equal step is said to fall *exponentially*. It is usually written with the number e ≈ 2.718, as B(x) = B₀ · e<sup>−x/L</sup>. Here L is the extra thickness that cuts the brightness by a factor of 2.718.
+Third complication: suppose you can only read a light meter on the far side, and you want to know what happens if the fog gets 1 mm thicker. You do not need to know how bright the torch is. The meter reading drops by the per-millimetre factor whether the torch is bright or dim.
 
-*Second complication: a square.* What the glass shrinks is the height of the light wave, meaning how strongly it swings. What a light meter reads, the brightness, is that height squared. Suppose the height falls as e<sup>−κx</sup>, where κ (Greek "kappa") is the fade rate of the height per unit thickness. Then the brightness falls as (e<sup>−κx</sup>)² = e<sup>−2κx</sup>, so it falls twice as steeply.
+What the fog borrows, and all it borrows: **equal slices of gap multiply the result by the same fraction, and a single number (the "density") sets that fraction.**
 
-*Third complication: darkness.* Darker glass has a bigger κ, so the same extra thickness costs a bigger factor. How dark the glass is sets the size of the whole effect.
+The tempting wrong conclusion: fog soaks up light, so you might think the gap in a microscope soaks up electrons, stopping them partway or draining their energy. It does not. The gap is empty; nothing there absorbs anything. An electron that does not get across simply bounces back into the metal it came from, and one that does get across arrives with its energy intact. Nobody ever finds an electron "halfway, slowed down". The fog has the right arithmetic for the wrong reason.
 
-*Where the glass picture stops working.* Glass absorbs: the missing light becomes heat. The gap in the microscope is empty, absorbs nothing, and the electrons that fail to cross just bounce back. The fading also has a different cause. Nothing in the gap blocks the electron; the electron doesn't have enough energy to be there. So take only the *shape* of the answer from the glass: a fixed factor per ångström, and a square. The *size* of the factor comes from the calculation below.
+Where the parallel stops: in fog the fraction is set by stuff in the way. In the microscope there is no stuff. What sets the fraction is how far short the electron is of the energy it would need to be in the gap at all. Why an electron can be found in a region it does not have the energy for is something no everyday system does. The rule that says it happens is observed and has been checked very precisely; nobody has a machinery underneath it, and I will not invent one. What follows describes what the rule predicts.
 
-**The real thing, with the algebra**
+## Now the real thing
 
-The tip and the surface are two pieces of metal with a gap of empty space between them, of width d, usually several ångströms. A metal holds on to its electrons. Pulling one out into empty space costs a definite energy φ (Greek "phi"), called the *work function*. For common tip and sample metals φ is about 4 to 5.5 eV. One eV (electron-volt) is the energy an electron gains falling through one volt, 1.6×10⁻¹⁹ joule.
+A scanning tunneling microscope holds a sharp metal tip a few ångströms above a metal surface, with a small voltage between them (the *bias voltage*, typically a few thousandths of a volt to about a volt). Classically no current should flow: an electron inside a metal is held in by an energy step at the surface, and the empty gap is on the wrong side of that step. The size of the step is the *work function*, written φ, which is the energy needed to pull one electron out of the metal into empty space. It is **measured**, and for common tip and surface metals it is about 4 to 5 *electronvolts* (eV; one eV is the energy an electron gains when it moves through one volt, 1 eV = 1.602 × 10⁻¹⁹ J).
 
-The electrons that cross are the most energetic ones in the metal, and even they are short of that energy by about φ. In pre-quantum physics none of them could enter the gap, and the current would be exactly zero. In quantum mechanics, the physics of very small things, an electron is also a wave spread through space. At the gap its wave fades instead of stopping dead. That leak through a region the electron doesn't have the energy to be in is what "tunneling" means. Here is how fast the wave fades.
+Yet a small current does flow. Electrons crossing a gap they classically cannot cross is called *tunneling*. Here is the algebra for how fast the crossing chance falls with gap width.
 
-1. Let ψ(x) (Greek "psi") be the height of the electron's wave at position x. The rule every electron wave obeys (the Schrödinger equation) reads, for a problem along one direction:
+### Step 1: the rule for the electron inside the gap
 
-   d²ψ/dx² = (2m/ħ²) · (U − E) · ψ
+In quantum mechanics an electron is described by a *wavefunction* ψ(x): a number attached to each position x, whose square |ψ(x)|² gives the chance of finding the electron at x. Let x be the distance measured across the gap, from the tip (x = 0) towards the surface.
 
-   The symbols:
-   - d²ψ/dx² is how sharply the graph of ψ bends at x.
-   - m = 9.11×10⁻³¹ kg is the electron's mass.
-   - ħ ("h-bar") = 1.055×10⁻³⁴ joule-seconds is Planck's constant divided by 2π. It is the constant that sets how wave-like matter is.
-   - E is the electron's energy.
-   - U is the energy it would need to be at x.
+The rule that governs ψ is the *Schrödinger equation*. For one direction and a region where the potential energy is a constant U, it reads
 
-2. Inside the metal, E is bigger than U, so the right side has the opposite sign to ψ. Wherever the wave is above zero it bends back down, and wherever it is below zero it bends back up. The result is a wiggle, which is an ordinary moving electron.
 
-3. In the gap, U − E = φ, which is positive. Now the wave bends *away* from zero wherever it is, so it grows or shrinks without wiggling. The shrinking piece is ψ(x) = ψ(0) · e<sup>−κx</sup>. Its bending is κ² · e<sup>−κx</sup>. Substituting into the rule gives
+```math
+-\frac{\hbar^2}{2m}\,\frac{d^2\psi}{dx^2} + U\,\psi = E\,\psi
+```
 
-   κ² = 2mφ/ħ²  →  κ = √(2mφ) / ħ
 
-   (A gap of finite width also allows a growing piece. When κd is well above 1, as it is here at about 5 to 10, including it changes only the constant in front and not the fade. I'm skipping that bookkeeping.)
+where:
+- m is the electron's mass, 9.109 × 10⁻³¹ kg,
+- ħ ("h-bar") is Planck's constant divided by 2π, 1.055 × 10⁻³⁴ J·s, the constant that sets the size of all quantum effects,
+- E is the electron's energy,
+- U is the potential energy it would have in the gap,
+- d²ψ/dx² is the *curvature* of ψ: how fast its slope changes as you step along x.
 
-4. Quantum mechanics has a rule that the chance of finding the electron at a spot is the square of the wave's height there. At the far side of the gap the height is down by e<sup>−κd</sup>, so the chance of arriving is down by e<sup>−2κd</sup>. This is the square from the glass. The current follows it:
+This equation is **postulated** (put in by hand, then tested against experiment), not derived from anything deeper.
 
-   I ≈ C · V · e<sup>−2κd</sup>
+### Step 2: rearrange
 
-   Here I is the current and V is the small voltage between tip and sample that makes electrons flow one way. C lumps together how many electrons are ready on one side and how many empty places are waiting on the other.
+Move terms across:
 
-5. Pull the tip back by 1 Å:
 
-   I(d) / I(d + 1 Å) = e<sup>2κ · 1 Å</sup>
+```math
+\frac{d^2\psi}{dx^2} = \frac{2m\,(U - E)}{\hbar^2}\,\psi
+```
 
-   d has cancelled, so the factor is the same at every gap width. This is the extra-sheet rule.
 
-6. Now the numbers, taking φ = 5 eV = 8.0×10⁻¹⁹ J:
-   - 2mφ = 2 × (9.11×10⁻³¹ kg) × (8.0×10⁻¹⁹ J) = 1.46×10⁻⁴⁸ kg·J
-   - √(2mφ) = 1.21×10⁻²⁴ kg·m/s
-   - κ = 1.21×10⁻²⁴ / 1.055×10⁻³⁴ = 1.15×10¹⁰ per metre = 1.15 per ångström
-   - 2κ × 1 Å = 2.29, and e<sup>2.29</sup> ≈ 9.9
+In the gap the electron is short of energy: U − E is positive, and for an electron near the top of the filled levels in the metal it is just the work function, U − E ≈ φ. So the right-hand side is a **positive** number times ψ. Give that number a name:
 
-   That is the tenfold. A handy form is κ ≈ 0.51 × √(φ in eV) per ångström, which gives:
 
-   | Wall height φ | Current change per Å |
-   |---|---|
-   | 4 eV | ×7.8 |
-   | 4.5 eV | ×8.8 |
-   | 5 eV | ×9.9 |
-   | 5.5 eV | ×11 |
+```math
+\kappa^2 = \frac{2m\,\varphi}{\hbar^2}, \qquad \kappa = \frac{\sqrt{2m\varphi}}{\hbar}
+```
 
-   "Tenfold" is the round number for a wall about 5 eV tall. Because φ sits under a square root, the answer barely changes from one metal to another.
 
-**What this rests on, and where it fails**
+κ ("kappa") is the *decay constant*: it plays the role of the fog's density. The equation is now
 
-- **Flat wall.** The wall is treated as flat on top, with height φ. For two different metals, use roughly the average of their two work functions. This holds while the voltage V is small compared with the few volts that φ corresponds to; normal operation is about 0.01 to 1 V. At several volts the top of the wall tilts into a ramp, electrons cross a thinner slice of it, and a different law takes over.
-- **A clean fade.** This needs κd well above 1, meaning gaps of several ångströms. Below about 3 Å, the pull each electron feels toward the nearby metal surfaces drags the top of the wall down until it stops being a wall. The tip and surface atoms start to touch, and the current stops growing tenfold per ångström and levels off.
-- **Clean conditions.** The factor of about 10 is for clean metals in vacuum. In air, or with stray molecules stuck to the tip, the wall is effectively lower. The measured factor per ångström is then often noticeably smaller than 10.
-- **C varies across the surface.** Different atoms have different numbers of electrons at the right energy. C changes slowly with d compared with the exponential, so it doesn't spoil the tenfold-per-ångström rule. It does mean a change in current is not purely a change in height.
+
+```math
+\frac{d^2\psi}{dx^2} = \kappa^2\,\psi .
+```
+
+
+### Step 3: solve it
+
+Try ψ(x) = A e<sup>−κx</sup>, where A is whatever value ψ has at the tip end of the gap. Take the slope twice:
+
+
+```math
+\frac{d\psi}{dx} = -\kappa A e^{-\kappa x}, \qquad
+\frac{d^2\psi}{dx^2} = \kappa^2 A e^{-\kappa x} = \kappa^2\,\psi. \;\checkmark
+```
+
+
+So this works. (e<sup>+κx</sup> also solves the equation, but it grows across the gap; for a gap of several ångströms it contributes a negligible correction to the crossing chance, and I am dropping it. This is the **assumption** κd ≫ 1, checked below.)
+
+This is the fog: every extra distance Δx multiplies ψ by the same factor e<sup>−κΔx</sup>.
+
+### Step 4: from ψ to current
+
+The chance of finding the electron at the far side of a gap of width d is |ψ(d)|², which is proportional to
+
+
+```math
+e^{-2\kappa d}.
+```
+
+
+(The 2 appears because the chance is ψ *squared*.)
+
+The current I is the number of electrons per second that try to cross, times the chance each one makes it. At small bias voltage the number trying does not depend on d, so
+
+
+```math
+I \propto e^{-2\kappa d}.
+```
+
+
+### Step 5: move the tip by Δd
+
+Divide the current at gap d by the current at gap d + Δd:
+
+
+```math
+\frac{I(d)}{I(d+\Delta d)} = \frac{e^{-2\kappa d}}{e^{-2\kappa (d+\Delta d)}} = e^{2\kappa\,\Delta d}.
+```
+
+
+The starting gap d has cancelled out, exactly like the torch brightness in the fog. The factor per step depends only on κ and the step.
+
+### Step 6: put in numbers
+
+Take φ = 4.5 eV = 4.5 × 1.602 × 10⁻¹⁹ J = 7.21 × 10⁻¹⁹ J.
+
+
+```math
+2m\varphi = 2 \times 9.109\times10^{-31} \times 7.21\times10^{-19} = 1.314\times10^{-48}\ \text{kg·J}
+```
+
+
+
+```math
+\sqrt{2m\varphi} = 1.146\times10^{-24}, \qquad
+\kappa = \frac{1.146\times10^{-24}}{1.055\times10^{-34}} = 1.09\times10^{10}\ \text{m}^{-1} = 1.09\ \text{Å}^{-1}.
+```
+
+
+A handy form of the same result: κ ≈ 0.51 × √(φ in eV), in inverse ångströms.
+
+For Δd = 1 Å:
+
+
+```math
+2\kappa\,\Delta d = 2.17, \qquad e^{2.17} \approx 8.8 .
+```
+
+
+Over the range of work functions for common metals:
+
+| work function φ | κ (per Å) | current factor per Å, e<sup>2κ·1 Å</sup> |
+| --- | --- | --- |
+| 4.0 eV | 1.02 | ≈ 7.8 |
+| 4.5 eV | 1.09 | ≈ 8.8 |
+| 5.0 eV | 1.14 | ≈ 9.9 |
+
+That is the "about tenfold". Check of the assumption from Step 3: at a working gap of about 5 Å, κd ≈ 5, and e<sup>−5</sup> is under 1%, so dropping the growing piece was safe.
+
+## What was assumed, and where it breaks
+
+- **Flat energy step (assumed).** The gap was treated as a region of constant height φ. Really the height sags near each metal surface (an electron near a metal is pulled toward it by the charge it induces there) and tilts with the bias voltage. That lowers the effective step, so the *measured* factor per ångström is often somewhat below the table's numbers; experiments commonly report an "apparent barrier height" smaller than the work function.
+- **Small bias (assumed).** If the bias voltage is not small compared with φ/e (roughly, not well under a few volts), electrons at higher energies see a lower step and φ in the formula has to be replaced by a smaller average.
+- **Only the exponential kept (approximation).** The number of electrons trying to cross, and the exact prefactor in front of the exponential, also depend weakly on d. Next to the exponential that is a small correction.
+- **One direction only (simplification).** Electrons also move sideways; the ones heading straight across see the smallest effective step and dominate the current, which is why the one-dimensional calculation lands close.
+- **Very close gaps (breaks down).** Below roughly 3 to 4 Å the tip starts to touch the surface electronically: the energy step collapses, atoms can be pulled by the tip, and the current stops rising exponentially and levels off.
+
+That tenfold change per ångström is also why the microscope can see single atoms: if one atom on the tip sits even one ångström closer to the surface than its neighbours, it carries almost all of the current.
 
 </details>
-
 
 ## Why this exists
 
@@ -369,6 +513,8 @@ A style skill that decides you look lost is worse than no skill.
   them: Feynman labels each claim as observed, derived, assumed or convention,
   and never invents a mechanism; Griffiths marks definitions, conventions and
   results, and warns once about the standard mistake. New evals S1 and S2.
+- README samples re-run on this version, in English and Chinese, so they show the
+  new analogy and claim-labelling rules in practice.
 
 ### v1.1.0
 
